@@ -3,7 +3,7 @@
   <PawnKindDef>
     <defName>Phoenix_Colonist</defName>
     <label>凤凰族殖民者</label>
-    <race>Phoenix</race>
+    <race>PhoenixRace</race>
     <defaultFactionType>PlayerColony</defaultFactionType>
     <combatPower>100</combatPower>
     <initialResistanceRange>10~20</initialResistanceRange>

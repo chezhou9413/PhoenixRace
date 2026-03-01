@@ -3,7 +3,7 @@
     <ChezhouLib.LibDef.ClAnimation>
         <defName>PhoenixFly</defName>
         <!-- 绑定种族 -->
-        <raceDef>Phoenix</raceDef>
+        <raceDef>PhoenixRace</raceDef>
         <label>凤凰族飞行动画</label>
         <!-- 序列帧路径 -->
         <texPath>AlienRace/PhoenixAnimation/PhoenixFly/Fly</texPath>

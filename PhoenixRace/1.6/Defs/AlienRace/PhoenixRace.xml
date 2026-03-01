@@ -7,7 +7,7 @@
     </HeadTypeDef>
 
     <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
-        <defName>Phoenix</defName>
+        <defName>PhoenixRace</defName>
         <label>凤凰</label>
         <description>23333333</description>
 
