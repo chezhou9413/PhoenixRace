@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>Raven_Mech</defName>
+    <label>渡鸦机械体</label>
+    <description>一种模仿渡鸦形态构建的机械体，搭载了来自ChezhouLib的先进飞行组件。它能够通过磁悬浮和仿生机翼在各种地形上空自由穿梭。</description>
+    <statBases>
+      <MoveSpeed>6.5</MoveSpeed>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+      <BandwidthCost>1</BandwidthCost>
+      <ControlTakingTime>15</ControlTakingTime>
+      <MechEnergyLossPerHP>0.4</MechEnergyLossPerHP>
+    </statBases>
+    <race>
+      <body>Mech_Light</body>
+      <baseBodySize>0.7</baseBodySize>
+      <baseHealthScale>0.9</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <mechWeightClass>Light</mechWeightClass>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding_Metal</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <renderTree>Raven_Mech_RenderTree</renderTree>
+    </race>
+    <butcherProducts>
+      <Steel>10</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
+    <comps>
+      <li Class="ChezhouLib.ClThingComp.ThingCompProperties_RaceFly">
+        <flySpeed>6.5</flySpeed>
+        <diagonalSpeed>1.414</diagonalSpeed>
+        <drawHeight>4</drawHeight>
+        <hoverSize>0.1</hoverSize>
+        <hoverSpeed>2.5</hoverSpeed>
+        <shadowTexPath>back</shadowTexPath>
+        <shadowSize>1.8,1.8,1.8</shadowSize>
+        <fullyAutomaticMode>true</fullyAutomaticMode>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>机翼边缘</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>喙</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>Raven_Mech</defName>
+    <label>渡鸦</label>
+    <race>Raven_Mech</race>
+    <combatPower>100</combatPower>
+    <modExtensions>
+      <li Class="ChezhouLib.Extension.kindRule">
+        <addAbility>
+          <li>Ability_HomingMissile</li>
+          <li>Ability_DisruptionMatrix</li>
+        </addAbility>
+      </li>
+    </modExtensions>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Mechanoids/Rave/Raven</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.7, 0.5)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <controlGroupPortraitZoom>1.2</controlGroupPortraitZoom>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="MediumMechanoidRecipe">
+    <defName>Gestate_Raven_Mech</defName>
+    <label>培育渡鸦机械体</label>
+    <description>在培育池中生长出渡鸦机械体的身体并注入控制子程序。</description>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <products>
+      <Raven_Mech>1</Raven_Mech>
+    </products>
+    <gestationCycles>1</gestationCycles>
+    <descriptionHyperlinks>
+      <ThingDef>Raven_Mech</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+</Defs>

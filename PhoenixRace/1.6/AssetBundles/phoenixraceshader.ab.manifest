@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 3155819186
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 315295004233befa23637b009dceb637
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 171fbca41e3589b78b4bb6aaeab84eaa
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Shader/ShieldEnergyFlow.shader
+- Assets/Shader/ShieldDissolve.shader
+- Assets/image/Noise.png
+- Assets/Shader/SingleImageGlitch.shader
+Dependencies: []

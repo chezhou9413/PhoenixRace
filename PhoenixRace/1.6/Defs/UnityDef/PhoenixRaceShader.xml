@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ChezhouLib.LibDef.UnityShaderLord>
+       <defName>PhoenixRaceShader</defName>
+       <AbPath>/1.6/AssetBundles/phoenixraceshader.ab</AbPath>
+       <ShaderFolderName>/Shader/</ShaderFolderName>
+       <ImageFolderName>/image/</ImageFolderName>
+    </ChezhouLib.LibDef.UnityShaderLord>
+    <ChezhouLib.LibDef.ClAssetLord>
+        <defName>PhoenixRaceLord</defName>
+        <label>凤凰族预制体管理</label>
+        <AbPath>/1.6/AssetBundles/phoenixraceobj.ab</AbPath>
+        <unityAssetMount>
+            <li>
+                <key>Phoenix_PhoenixShid</key>
+                <value>/prefab/PhoenixRace/PhoenixShid.prefab</value>
+            </li>
+        </unityAssetMount>
+    </ChezhouLib.LibDef.ClAssetLord>
+</Defs>

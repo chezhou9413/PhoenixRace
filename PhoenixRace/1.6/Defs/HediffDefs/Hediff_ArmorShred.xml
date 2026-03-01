@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffDef>
+        <defName>Hediff_ArmorShred</defName>
+        <label>护甲破碎</label>
+        <description>护甲防护能力被大幅削弱。</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        
+        <!-- 是负面效果 -->
+        <isBad>true</isBad>
+        
+        <!-- 红色标签 -->
+        <defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+        
+        <!-- 10秒后消失 -->
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <!-- 600 ticks = 10秒 -->
+                <disappearsAfterTicks>600</disappearsAfterTicks>
+                <!-- 显示剩余时间 -->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+
+        <stages>
+            <li>
+                <!-- 护甲 -30% (绝对值) -->
+                <statOffsets>
+                    <ArmorRating_Sharp>-0.3</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>-0.3</ArmorRating_Blunt>
+                    <ArmorRating_Heat>-0.3</ArmorRating_Heat>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>

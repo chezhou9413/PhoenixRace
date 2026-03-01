@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PawnRenderTreeDef>
+    <defName>Raven_Mech_RenderTree</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <texPath>Mechanoids/Rave/Raven</texPath>
+          <drawSize>1.5</drawSize>
+          <baseLayer>10</baseLayer>
+          <useRottenColor>true</useRottenColor>
+          <children>
+            <li>
+              <debugLabel>Glow</debugLabel>
+              <nodeClass>ChezhouLib.ClPawnRenderNodeWorker.PawnRenderNode_CustomGlow</nodeClass>
+
+              <texPath>Mechanoids/Rave/RavenLight</texPath>
+              <drawSize>1.5</drawSize>
+
+              <baseLayer>11</baseLayer>
+              <shaderTypeDef>MoteGlow</shaderTypeDef>
+              <useRottenColor>false</useRottenColor>
+            </li>
+
+            <li Class="PawnRenderNodeProperties_Overlay">
+              <debugLabel>Wounds</debugLabel>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <baseLayer>20</baseLayer>
+            </li>
+
+            <li Class="PawnRenderNodeProperties_Overlay">
+              <debugLabel>Firefoam</debugLabel>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <baseLayer>30</baseLayer>
+            </li>
+          </children>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+</Defs>

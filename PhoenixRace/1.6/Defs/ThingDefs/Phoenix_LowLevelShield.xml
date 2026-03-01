@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ApparelBase">
+    <defName>Phoenix_LowLevelShield</defName>
+    <label>低级凤凰护盾</label>
+    <description>低级凤凰护盾，提供一定的防护能力。</description>
+    <tickerType>Normal</tickerType>
+    <apparel>
+      <wornGraphicPath />
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+    </apparel>
+    <graphicData>
+      <texPath>Things/Item/Resource/ReinforcedBarrel/ReinforcedBarrel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.05</Mass>
+      <MarketValue>50000</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Flammability>0.3</Flammability>
+      <Insulation_Cold>0</Insulation_Cold>
+      <Insulation_Heat>0</Insulation_Heat>
+    </statBases>
+    <tradeability>All</tradeability>
+    <equippedStatOffsets>
+      <SocialImpact>0.15</SocialImpact>
+    </equippedStatOffsets>
+    <comps>
+      <li Class="PhoenixRaceLib.PhoxThingComp.ThingCompProperties_PhoenixShield">
+        <maxShield>150</maxShield>
+        <minShield>0</minShield>
+        <shieldRegenRate>2.5</shieldRegenRate>
+        <shieldRateCombatTime>10</shieldRateCombatTime>
+        <Skip>
+          <li>Extinguish</li>
+        </Skip>
+      </li>
+    </comps>
+    <costList>
+      <WoodLog>50</WoodLog>
+      <Gold>20</Gold>
+    </costList>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+  </ThingDef>
+</Defs>
+

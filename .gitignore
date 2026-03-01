@@ -1,0 +1,9 @@
+/*
+!/.gitignore
+!/PhoenixRace
+!/README.md
+
+# VS缓存和编译产物
+PhoenixRace/1.6/Source/PhoenixRaceLib/.vs/
+PhoenixRace/1.6/Source/PhoenixRaceLib/obj/
+PhoenixRace/1.6/Source/PhoenixRaceLib/bin/

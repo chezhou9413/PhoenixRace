@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 抛射体定义 -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Projectile_HomingMissile</defName>
+    <label>猎杀飞弹</label>
+    <thingClass>PhoxProjectile.Projectile_HomingWithLaser</thingClass>
+    <graphicData>
+      <texPath>Projectile/HomingMissile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <speed>15</speed>
+      <stoppingPower>1.5</stoppingPower>
+    </projectile>
+  </ThingDef>
+
+  <!-- 技能定义 -->
+  <AbilityDef>
+    <defName>Ability_HomingMissile</defName>
+    <label>猎杀飞弹</label>
+    <description>发射一枚带激光瞄准的追踪导弹，必定命中目标。</description>
+    <iconPath>Ability/HomingMissile</iconPath>
+    <cooldownTicksRange>300</cooldownTicksRange>
+    <hostile>true</hostile>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>PhoenixRaceLib.PhoxVerb.Verb_LaunchHomingMissile</verbClass>
+      <range>40</range>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <drawAimPie>true</drawAimPie>
+      <soundCast>Shot_ChargeRifle</soundCast>
+      <muzzleFlashScale>9</muzzleFlashScale>
+      <defaultProjectile>Projectile_HomingMissile</defaultProjectile>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+</Defs>

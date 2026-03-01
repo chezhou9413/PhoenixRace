@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- 护盾倍率（乘算，默认 1） -->
+    <StatDef>
+        <defName>Phoenix_ShieldMultiplier</defName>
+        <label>凤凰等离子护盾 - 护盾倍率</label>
+        <description>乘算作用于最终护盾上限。数值为 1 时不改变护盾值。</description>
+        <category>PawnCombat</category>
+        <defaultBaseValue>1</defaultBaseValue>
+        <minValue>0</minValue>
+        <maxValue>100</maxValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <toStringNumberSense>Factor</toStringNumberSense>
+        <showOnPawns>true</showOnPawns>
+        <showOnHumanlikes>true</showOnHumanlikes>
+        <showOnAnimals>false</showOnAnimals>
+        <showOnMechanoids>true</showOnMechanoids>
+    </StatDef>
+
+    <!-- 护盾增加（加算，默认 0） -->
+    <StatDef>
+        <defName>Phoenix_ShieldOffset</defName>
+        <label>凤凰等离子护盾 - 护盾增加</label>
+        <description>加算作用于最终护盾上限，在倍率计算后叠加。</description>
+        <category>PawnCombat</category>
+        <defaultBaseValue>0</defaultBaseValue>
+        <minValue>-9999</minValue>
+        <maxValue>9999</maxValue>
+        <toStringStyle>FloatOne</toStringStyle>
+        <toStringNumberSense>Offset</toStringNumberSense>
+        <showOnPawns>true</showOnPawns>
+        <showOnHumanlikes>true</showOnHumanlikes>
+        <showOnAnimals>false</showOnAnimals>
+        <showOnMechanoids>true</showOnMechanoids>
+    </StatDef>
+
+    <!-- 护盾回复倍率（乘算，默认 1） -->
+    <StatDef>
+        <defName>Phoenix_ShieldRegenMultiplier</defName>
+        <label>凤凰等离子护盾 - 护盾回复倍率</label>
+        <description>乘算作用于护盾每秒回复量。数值为 1 时不改变回复速率。</description>
+        <category>PawnCombat</category>
+        <defaultBaseValue>1</defaultBaseValue>
+        <minValue>0</minValue>
+        <maxValue>100</maxValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <toStringNumberSense>Factor</toStringNumberSense>
+        <showOnPawns>true</showOnPawns>
+        <showOnHumanlikes>true</showOnHumanlikes>
+        <showOnAnimals>false</showOnAnimals>
+        <showOnMechanoids>true</showOnMechanoids>
+    </StatDef>
+
+    <!-- 护盾回复增加（加算，默认 0） -->
+    <StatDef>
+        <defName>Phoenix_ShieldRegenOffset</defName>
+        <label>凤凰等离子护盾 - 护盾回复增加</label>
+        <description>加算作用于护盾每秒回复量，在倍率计算后叠加。</description>
+        <category>PawnCombat</category>
+        <defaultBaseValue>0</defaultBaseValue>
+        <minValue>-9999</minValue>
+        <maxValue>9999</maxValue>
+        <toStringStyle>FloatOne</toStringStyle>
+        <toStringNumberSense>Offset</toStringNumberSense>
+        <showOnPawns>true</showOnPawns>
+        <showOnHumanlikes>true</showOnHumanlikes>
+        <showOnAnimals>false</showOnAnimals>
+        <showOnMechanoids>true</showOnMechanoids>
+    </StatDef>
+
+    <!-- 破盾复原时间（加算，单位秒，默认 0） -->
+    <StatDef>
+        <defName>Phoenix_ShieldBreakRecoveryTime</defName>
+        <label>凤凰等离子护盾 - 破盾复原时间</label>
+        <description>加算作用于护盾被破坏后开始回复前的等待时间（秒）。</description>
+        <category>PawnCombat</category>
+        <defaultBaseValue>0</defaultBaseValue>
+        <minValue>0</minValue>
+        <maxValue>9999</maxValue>
+        <toStringStyle>FloatOne</toStringStyle>
+        <toStringNumberSense>Offset</toStringNumberSense>
+        <showOnPawns>true</showOnPawns>
+        <showOnHumanlikes>true</showOnHumanlikes>
+        <showOnAnimals>false</showOnAnimals>
+        <showOnMechanoids>true</showOnMechanoids>
+    </StatDef>
+
+    <!-- 破盾复原时间倍率（乘算，默认 1） -->
+    <StatDef>
+        <defName>Phoenix_ShieldBreakRecoveryTimeMultiplier</defName>
+        <label>凤凰等离子护盾 - 破盾复原时间倍率</label>
+        <description>乘算作用于护盾被破坏后开始回复前的等待时间。数值为 1 时不改变复原时间。</description>
+        <category>PawnCombat</category>
+        <defaultBaseValue>1</defaultBaseValue>
+        <minValue>0</minValue>
+        <maxValue>100</maxValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <toStringNumberSense>Factor</toStringNumberSense>
+        <showOnPawns>true</showOnPawns>
+        <showOnHumanlikes>true</showOnHumanlikes>
+        <showOnAnimals>false</showOnAnimals>
+        <showOnMechanoids>true</showOnMechanoids>
+    </StatDef>
+
+</Defs>
