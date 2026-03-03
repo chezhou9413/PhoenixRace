@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <PawnRenderTreeDef>
+        <defName>PhoenixRenderTree</defName>
+        <root Class="PawnRenderNodeProperties_Parent">
+            <debugLabel>Root</debugLabel>
+            <tagDef>Root</tagDef>
+            <!-- 整体绘制偏移往上0.25 -->
+            <drawData>
+                <defaultData>
+                    <offset>(0, 0, 0.15)</offset>
+                </defaultData>
+            </drawData>
+            <children>
+                <!-- 翅膀后层（身体后方） -->
+                <li>
+                    <debugLabel>Phoenix wing back</debugLabel>
+                    <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                    <texPath>AlienRace/Phoenix/wingBack/wingBack</texPath>
+                    <parentTagDef>Body</parentTagDef>
+                    <colorType>Skin</colorType>
+                    <overrideMeshSize>(1.75, 1.75)</overrideMeshSize>
+                    <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                    <drawData>
+                        <defaultData>
+                            <layer>-5</layer>
+                        </defaultData>
+                        <dataNorth>
+                            <offset>(0, 0, 0)</offset>
+                            <layer>-5</layer>
+                        </dataNorth>
+                        <dataSouth>
+                            <offset>(0, 0, 0)</offset>
+                            <layer>-5</layer>
+                        </dataSouth>
+                        <dataEast>
+                            <offset>(0, 0, 0)</offset>
+                            <layer>-5</layer>
+                        </dataEast>
+                        <dataWest>
+                            <offset>(0, 0, 0)</offset>
+                            <layer>-5</layer>
+                        </dataWest>
+                    </drawData>
+                </li>
+                <!-- 身体节点 -->
+                <li>
+                    <debugLabel>Body</debugLabel>
+                    <nodeClass>PawnRenderNode_Body</nodeClass>
+                    <workerClass>PawnRenderNodeWorker_Body</workerClass>
+                    <tagDef>Body</tagDef>
+                    <skipFlag>Body</skipFlag>
+                    <colorType>Skin</colorType>
+                    <useRottenColor>true</useRottenColor>
+                    <useSkinShader>true</useSkinShader>
+                    <children>
+                        <li Class="PawnRenderNodeProperties_Tattoo" MayRequire="Ludeon.RimWorld.Ideology">
+                            <debugLabel>Body tattoo</debugLabel>
+                            <nodeClass>PawnRenderNode_Tattoo_Body</nodeClass>
+                            <workerClass>PawnRenderNodeWorker_Body_Tattoo</workerClass>
+                            <colorType>Skin</colorType>
+                            <useRottenColor>true</useRottenColor>
+                            <baseLayer>2</baseLayer>
+                            <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                        </li>
+                        <li Class="PawnRenderNodeProperties_Overlay">
+                            <debugLabel>Wounds - pre apparel</debugLabel>
+                            <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+                            <overlayLayer>Body</overlayLayer>
+                            <baseLayer>8</baseLayer>
+                        </li>
+                        <li Class="PawnRenderNodeProperties_Swaddle" MayRequire="Ludeon.RimWorld.Biotech">
+                            <debugLabel>Baby swaddle</debugLabel>
+                            <nodeClass>PawnRenderNode_Swaddle</nodeClass>
+                            <workerClass>PawnRenderNodeWorker_Swaddle</workerClass>
+                            <texPath>Things/Pawn/Humanlike/Apparel/SwaddledBaby/Swaddled_Child</texPath>
+                            <swaddleColorOffset>0.1</swaddleColorOffset>
+                            <brightnessRange>0.6~0.89</brightnessRange>
+                            <baseLayer>10</baseLayer>
+                        </li>
+                        <li Class="PawnRenderNodeProperties_Parent">
+                            <debugLabel>Apparel root</debugLabel>
+                            <tagDef>ApparelBody</tagDef>
+                            <baseLayer>20</baseLayer>
+                        </li>
+                        <li Class="PawnRenderNodeProperties_Overlay">
+                            <debugLabel>Wounds - post apparel</debugLabel>
+                            <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+                            <overlayOverApparel>true</overlayOverApparel>
+                            <overlayLayer>Body</overlayLayer>
+                            <baseLayer>30</baseLayer>
+                        </li>
+                        <li Class="PawnRenderNodeProperties_Overlay">
+                            <debugLabel>Firefoam</debugLabel>
+                            <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+                            <overlayLayer>Body</overlayLayer>
+                            <baseLayer>40</baseLayer>
+                        </li>
+                    </children>
+                </li>
+                <!-- 翅膀前层（身体前方，覆盖在服装之上） -->
+                <li>
+                    <debugLabel>Phoenix wing front</debugLabel>
+                    <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                    <texPath>AlienRace/Phoenix/wing/wing</texPath>
+                    <parentTagDef>Body</parentTagDef>
+                    <colorType>Skin</colorType>
+                    <overrideMeshSize>(1.75, 1.75)</overrideMeshSize>
+                    <baseLayer>45</baseLayer>
+                    <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                    <drawData>
+                        <defaultData>
+                            <layer>45</layer>
+                        </defaultData>
+                        <dataNorth>
+                            <offset>(0, 0, 0)</offset>
+                            <layer>45</layer>
+                        </dataNorth>
+                        <dataSouth>
+                            <offset>(0, 0, 0)</offset>
+                            <layer>45</layer>
+                        </dataSouth>
+                        <dataEast>
+                            <offset>(0, 0, 0)</offset>
+                            <layer>45</layer>
+                        </dataEast>
+                        <dataWest>
+                            <offset>(0, 0, 0)</offset>
+                            <layer>45</layer>
+                        </dataWest>
+                    </drawData>
+                </li>
+                <!-- 头部残肢节点 -->
+                <li>
+                    <debugLabel>Head stump</debugLabel>
+                    <nodeClass>PawnRenderNode_Stump</nodeClass>
+                    <workerClass>PawnRenderNodeWorker_Stump</workerClass>
+                    <texPath>Things/Pawn/Humanlike/Heads/None_Average_Stump</texPath>
+                    <baseLayer>50</baseLayer>
+                    <colorType>Skin</colorType>
+                    <skipFlag>Head</skipFlag>
+                    <useSkinShader>true</useSkinShader>
+                    <useRottenColor>true</useRottenColor>
+                    <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                </li>
+                <!-- 头部节点 -->
+                <li>
+                    <debugLabel>Head</debugLabel>
+                    <nodeClass>PawnRenderNode_Head</nodeClass>
+                    <workerClass>PawnRenderNodeWorker_Head</workerClass>
+                    <tagDef>Head</tagDef>
+                    <skipFlag>Head</skipFlag>
+                    <baseLayer>50</baseLayer>
+                    <colorType>Skin</colorType>
+                    <useRottenColor>true</useRottenColor>
+                    <useSkinShader>true</useSkinShader>
+                    <children>
+                        <li Class="PawnRenderNodeProperties_Tattoo" MayRequire="Ludeon.RimWorld.Ideology">
+                            <debugLabel>Head tattoo</debugLabel>
+                            <nodeClass>PawnRenderNode_Tattoo_Head</nodeClass>
+                            <workerClass>PawnRenderNodeWorker_Tattoo_Head</workerClass>
+                            <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                            <colorType>Skin</colorType>
+                            <baseLayer>52</baseLayer>
+                        </li>
+                        <li>
+                            <debugLabel>Beard</debugLabel>
+                            <nodeClass>PawnRenderNode_Beard</nodeClass>
+                            <workerClass>PawnRenderNodeWorker_Beard</workerClass>
+                            <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                            <colorType>Hair</colorType>
+                            <skipFlag>Beard</skipFlag>
+                            <baseLayer>60</baseLayer>
+                        </li>
+                        <li>
+                            <debugLabel>Hair</debugLabel>
+                            <nodeClass>PawnRenderNode_Hair</nodeClass>
+                            <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+                            <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                            <colorType>Hair</colorType>
+                            <skipFlag>Hair</skipFlag>
+                            <baseLayer>62</baseLayer>
+                        </li>
+                        <li Class="PawnRenderNodeProperties_Overlay">
+                            <debugLabel>Head wounds</debugLabel>
+                            <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+                            <overlayLayer>Head</overlayLayer>
+                            <baseLayer>65</baseLayer>
+                        </li>
+                        <li Class="PawnRenderNodeProperties_Parent">
+                            <debugLabel>Apparel root</debugLabel>
+                            <tagDef>ApparelHead</tagDef>
+                            <baseLayer>70</baseLayer>
+                        </li>
+                        <li Class="PawnRenderNodeProperties_Overlay">
+                            <debugLabel>Firefoam</debugLabel>
+                            <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+                            <overlayLayer>Head</overlayLayer>
+                            <baseLayer>85</baseLayer>
+                        </li>
+                        <li Class="PawnRenderNodeProperties_Overlay">
+                            <debugLabel>Status overlay</debugLabel>
+                            <workerClass>PawnRenderNodeWorker_OverlayStatus</workerClass>
+                            <baseLayer>100</baseLayer>
+                        </li>
+                    </children>
+                </li>
+                <!-- 尾羽（身体后方） -->
+                <li>
+                    <debugLabel>Phoenix tail plumage</debugLabel>
+                    <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                    <texPath>AlienRace/Phoenix/tail/tail_plumage</texPath>
+                    <parentTagDef>Body</parentTagDef>
+                    <colorType>Skin</colorType>
+                    <overrideMeshSize>(1.4, 1.4)</overrideMeshSize>
+                    <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                    <drawData>
+                        <defaultData>
+                            <layer>-5</layer>
+                        </defaultData>
+                        <dataNorth>
+                            <offset>(0, 0, -0.13)</offset>
+                            <layer>35</layer>
+                        </dataNorth>
+                        <dataSouth>
+                            <offset>(0, 0, -0.13)</offset>
+                            <layer>-5</layer>
+                        </dataSouth>
+                        <dataEast>
+                            <offset>(-0.09, 0, -0.13)</offset>
+                            <layer>-5</layer>
+                        </dataEast>
+                        <dataWest>
+                            <offset>(0.09, 0, -0.13)</offset>
+                            <layer>-5</layer>
+                        </dataWest>
+                    </drawData>
+                </li>
+                <!-- 武器/携带物品 -->
+                <li Class="PawnRenderNodeProperties_Carried">
+                    <debugLabel>Weapon/carried thing</debugLabel>
+                    <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+                </li>
+            </children>
+        </root>
+    </PawnRenderTreeDef>
+
+</Defs>

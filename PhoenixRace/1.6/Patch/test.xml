@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  将 MapComponent_DroneECS 注入到所有 MapDef 的 components 列表
+  这样无论哪张地图都会自动运行无人机系统
+-->
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/MapDef/components</xpath>
+        <value>
+            <li>DroneECS.MapComponent_DroneECS</li>
+        </value>
+    </Operation>
+
+    <!--
+        如果 MapDef 没有 <components> 节点, 先创建它:
+    -->
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/MapDef[not(components)]</xpath>
+                <success>Always</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/MapDef[not(components)]</xpath>
+                <value>
+                    <components>
+                        <li>DroneECS.MapComponent_DroneECS</li>
+                    </components>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>

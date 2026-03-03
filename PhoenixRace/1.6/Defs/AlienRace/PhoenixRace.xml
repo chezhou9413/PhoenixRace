@@ -111,22 +111,21 @@
                 </reproduction>
 
                 <alienPartGenerator>
-                    <customDrawSize>(2.2, 2.2)</customDrawSize>
+                    <customDrawSize>(1, 1)</customDrawSize>
                     <customHeadDrawSize>(1.0, 1.0)</customHeadDrawSize>
-                    <customPortraitDrawSize>(2.2, 2.2)</customPortraitDrawSize>
-
+                    <customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
                     <headOffsetDirectional>
                         <north>
-                            <offset>(0, -0.055)</offset>
+                            <offset>(0, -0.02)</offset>
                         </north>
                         <south>
-                            <offset>(0, -0.055)</offset>
+                            <offset>(0, -0.02)</offset>
                         </south>
                         <east>
-                            <offset>(0, -0.055)</offset>
+                            <offset>(0, 0)</offset>
                         </east>
                         <west>
-                            <offset>(0, -0.055)</offset>
+                            <offset>(0, 0)</offset>
                         </west>
                     </headOffsetDirectional>
 
@@ -373,127 +372,6 @@
                                 </east>
                             </offsets>
                         </li>
-
-                        <!-- 翅膀前层 -->
-                        <li>
-                            <name>Phoenix_wing</name>
-                            <userCustomizable>false</userCustomizable>
-                            <path>AlienRace/Phoenix/wing/wing</path>
-                            <colorChannel>skin</colorChannel>
-                            <inFrontOfBody>true</inFrontOfBody>
-                            <layerInvert>false</layerInvert>
-                            <angle>0</angle>
-                            <drawSize>1.5</drawSize>
-                            <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
-                            <defaultOffset>Center</defaultOffset>
-                            <alignWithHead>false</alignWithHead>
-                            <conditions>
-                                <Posture>
-                                    <drawnStanding>true</drawnStanding>
-                                    <drawnLaying>true</drawnLaying>
-                                    <drawnInBed>true</drawnInBed>
-                                </Posture>
-                            </conditions>
-                            <offsets>
-                                <west>
-                                    <layerOffset>0.15</layerOffset>
-                                    <offset>(0.03,0)</offset>
-                                </west>
-                                <south>
-                                    <layerOffset>0.15</layerOffset>
-                                    <offset>(0,-0.1)</offset>
-                                </south>
-                                <north>
-                                    <layerOffset>0.08</layerOffset>
-                                    <offset>(0,-0.1)</offset>
-                                </north>
-                                <east>
-                                    <layerOffset>0.15</layerOffset>
-                                    <offset>(0.03,0)</offset>
-                                </east>
-                            </offsets>
-                        </li>
-
-                        <!-- 翅膀后层 -->
-                        <li>
-                            <name>Phoenix_wingBack</name>
-                            <userCustomizable>false</userCustomizable>
-                            <linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>
-                            <path>AlienRace/Phoenix/wingBack/wingBack</path>
-                            <colorChannel>skin</colorChannel>
-                            <inFrontOfBody>true</inFrontOfBody>
-                            <layerInvert>false</layerInvert>
-                            <angle>0</angle>
-                            <drawSize>1.5</drawSize>
-                            <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
-                            <defaultOffset>Center</defaultOffset>
-                            <alignWithHead>false</alignWithHead>
-                            <conditions>
-                                <Posture>
-                                    <drawnStanding>true</drawnStanding>
-                                    <drawnLaying>true</drawnLaying>
-                                    <drawnInBed>true</drawnInBed>
-                                </Posture>
-                            </conditions>
-                            <offsets>
-                                <west>
-                                    <layerOffset>-0.31</layerOffset>
-                                    <offset>(0.03,0)</offset>
-                                </west>
-                                <south>
-                                    <layerOffset>-0.31</layerOffset>
-                                    <offset>(0,-0.1)</offset>
-                                </south>
-                                <north>
-                                    <layerOffset>-0.31</layerOffset>
-                                    <offset>(0,-0.1)</offset>
-                                </north>
-                                <east>
-                                    <layerOffset>-0.31</layerOffset>
-                                    <offset>(0.03,0)</offset>
-                                </east>
-                            </offsets>
-                        </li>
-
-                        <!-- 尾羽 -->
-                        <li>
-                            <name>Phoenix_tail</name>
-                            <userCustomizable>false</userCustomizable>
-                            <path>AlienRace/Phoenix/tail/tail_plumage</path>
-                            <colorChannel>skin</colorChannel>
-                            <inFrontOfBody>true</inFrontOfBody>
-                            <layerInvert>false</layerInvert>
-                            <angle>0</angle>
-                            <drawSize>0.8</drawSize>
-                            <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
-                            <defaultOffset>Center</defaultOffset>
-                            <alignWithHead>false</alignWithHead>
-                            <conditions>
-                                <Posture>
-                                    <drawnStanding>true</drawnStanding>
-                                    <drawnLaying>true</drawnLaying>
-                                    <drawnInBed>true</drawnInBed>
-                                </Posture>
-                            </conditions>
-                            <offsets>
-                                <west>
-                                    <layerOffset>-0.33</layerOffset>
-                                    <offset>(0.16,-0.13)</offset>
-                                </west>
-                                <south>
-                                    <layerOffset>-0.33</layerOffset>
-                                    <offset>(0,-0.13)</offset>
-                                </south>
-                                <north>
-                                    <layerOffset>-0.16</layerOffset>
-                                    <offset>(0,-0.13)</offset>
-                                </north>
-                                <east>
-                                    <layerOffset>-0.33</layerOffset>
-                                    <offset>(0.16,-0.13)</offset>
-                                </east>
-                            </offsets>
-                        </li>
                     </bodyAddons>
 
                 </alienPartGenerator>
@@ -651,7 +529,7 @@
             <thinkTreeMain>Humanlike</thinkTreeMain>
             <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
             <intelligence>Humanlike</intelligence>
-            <renderTree>Humanlike</renderTree>
+            <renderTree>PhoenixRenderTree</renderTree>
             <bloodDef>Filth_Blood</bloodDef>
             <bloodSmearDef>Filth_BloodSmear</bloodSmearDef>
             <makesFootprints>true</makesFootprints>
@@ -718,10 +596,10 @@
                 <li Class="AlienRace.LifeStageAgeAlien">
                     <def>HumanlikeAdult</def>
                     <minAge>18</minAge>
-                    <customDrawSize>(1.0, 1.0)</customDrawSize>
-                    <customHeadDrawSize>(1.0, 1.0)</customHeadDrawSize>
-                    <customPortraitDrawSize>(1.0, 1.0)</customPortraitDrawSize>
-                    <customPortraitHeadDrawSize>(1.0, 1.0)</customPortraitHeadDrawSize>
+                    <customDrawSize>(1.15, 1.15)</customDrawSize>
+                    <customHeadDrawSize>(1.15, 1.15)</customHeadDrawSize>
+                    <customPortraitDrawSize>(1.15, 1.15)</customPortraitDrawSize>
+                    <customPortraitHeadDrawSize>(1.15, 1.15)</customPortraitHeadDrawSize>
                 </li>
             </lifeStageAges>
 
