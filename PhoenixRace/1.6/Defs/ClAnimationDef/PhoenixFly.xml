@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ChezhouLib.LibDef.ClAnimation>
+    <ChezhouLib.LibDef.ClAnimationClipDef>
         <defName>PhoenixFly</defName>
-        <!-- 绑定种族 -->
-        <raceDef>PhoenixRace</raceDef>
         <label>凤凰族飞行动画</label>
-        <!-- 序列帧路径 -->
-        <texPath>AlienRace/PhoenixAnimation/PhoenixFly/Fly</texPath>
-        <!-- 播放速度 -->
-        <playSpeed>3</playSpeed>
-        <!-- 在哪个渲染节点播放 -->
-        <renderNodeName>Phoenix_wingBack</renderNodeName>
-        <!-- 在这个hediff存在时播放 -->
+        <raceDef>PhoenixRace</raceDef>
+        <priority>1</priority>
+        <duration>60</duration>
+        <loop>true</loop>
+        <loopMode>Loop</loopMode>
+
         <hediff>
             <li>ClHediff_Flying</li>
         </hediff>
+
         <!-- 播放的时候隐藏哪个渲染节点 -->
-        <hiddRenderNodeName>
-            <li>Phoenix_wing</li>
-        </hiddRenderNodeName>
-         <!-- 在执行哪个job的时候播放
-        <jobDef>
-            <li>testjobdef</li>
-        </jobDef> -->
-        <!-- 播放优先级 -->
-        <pos>1</pos>
-        <!-- 是否启用反向循环播放 -->
-        <isRevertLoop>false</isRevertLoop>
-    </ChezhouLib.LibDef.ClAnimation>
+        <hideNodes>
+            <li>Phoenix wing front</li>
+        </hideNodes>
+
+        <tracks>
+            <li>
+                <renderNodeName>Phoenix wing back</renderNodeName>
+                <texPath>AlienRace/PhoenixAnimation/PhoenixFly/Fly</texPath>
+                <frameSpeed>3</frameSpeed>
+                <keyframes>
+                    <li>
+                        <tick>0</tick>
+                        <scale>1.5</scale>
+                    </li>
+                </keyframes>
+            </li>
+        </tracks>
+    </ChezhouLib.LibDef.ClAnimationClipDef>
 </Defs>

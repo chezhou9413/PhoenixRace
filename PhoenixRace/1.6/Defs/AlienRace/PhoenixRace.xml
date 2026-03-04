@@ -24,7 +24,7 @@
                     <li>LayDown</li>
                 </autoLandingJobDefs>
             </li>
-            <li Class="ChezhouLib.ClThingComp.ThingCompProperties_ClAnimationController"/>
+            <li Class="ChezhouLib.ClThingComp.ThingCompProperties_ClClipAnimController"/>
         </comps>
 
         <alienRace>
