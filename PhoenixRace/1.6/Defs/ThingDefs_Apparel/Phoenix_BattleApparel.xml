@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef Name="PhoenixMechanicArmorBase" ParentName="ApparelBase" Abstract="True">
+        <thingClass>Apparel</thingClass>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking> 
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <unfinishedThingDef>Phoenix_UnfinishedArmor</unfinishedThingDef>
+            <defaultIngredientFilter>
+                <categories>
+                    <li>Root</li>
+                </categories>
+                <disallowedThingDefs> <!--不让用的材料-->
+                    <li>Gold</li>
+                    <li>Silver</li>
+                    <li>Plasteel</li>
+                    <li>Jade</li>
+                    <li>Uranium</li>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">Obsidian</li>
+                </disallowedThingDefs>
+            </defaultIngredientFilter>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="PhoenixMechanicArmorBase">
+        <defName>Phoenix_Apparel_MechanicArmor</defName>
+        <label>凤凰机械师甲</label>
+        <description>凤凰机械师专用装甲，提供强大的机械辅助能力。</description>
+        <recipeMaker>
+            <researchPrerequisites> <!--科技前置-->
+                <li>UltraMechtech</li>
+                <li>Phoenix_BattleApparelSkill</li>
+            </researchPrerequisites>
+            <unfinishedThingDef>Phoenix_UnfinishedArmor</unfinishedThingDef>
+            <displayPriority>530</displayPriority> <!--UI显示优先级-->
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Pawn/Apparel/Phoenix_Apparel_MechanicArmor/Phoenix_Apparel_MechanicArmor</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>2.0</drawSize>
+            <drawOffset>(-0.2,0,0.2)</drawOffset>
+        </graphicData>
+        <statBases>
+            <Mass>12</Mass> <!--重量-->
+            <ArmorRating_Sharp>0.91</ArmorRating_Sharp> <!--利防-->
+            <ArmorRating_Blunt>0.91</ArmorRating_Blunt> <!--钝防-->
+            <ArmorRating_Heat>0.91</ArmorRating_Heat> <!--热防-->
+            <Insulation_Cold>64</Insulation_Cold> <!--冷温适应-->
+            <Insulation_Heat>64</Insulation_Heat> <!--热温适应-->
+            <EquipDelay>5</EquipDelay> <!--装备时间-->
+        </statBases>
+        <equippedStatOffsets>
+            <HackingSpeed>1.5</HackingSpeed> <!--骇入速度-->
+            <HackingStealth>1.5</HackingStealth> <!--骇入隐蔽-->
+            <MechBandwidth>120</MechBandwidth> <!--带宽-->
+            <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn> <!--射击准度-->
+            <MeleeHitChance>-0.5</MeleeHitChance> <!--近战命中-->
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.5</VacuumResistance> <!--真空抗性-->
+        </equippedStatOffsets>
+        <costList> <!--消耗材料-->
+            <NanostructuringChip>2</NanostructuringChip> <!--纳米结构芯片-->
+            <PowerfocusChip>1</PowerfocusChip> <!--能量汇聚芯片-->
+            <Plasteel>120</Plasteel> <!--玻璃钢-->
+            <ComponentSpacer>8</ComponentSpacer> <!--高级零部件-->
+        </costList>
+        <apparel>
+            <layers> <!--装备层-->
+                <li>Shell</li>
+            </layers>
+            <bodyPartGroups> <!--装备部位-->
+                <li>Torso</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <tags>
+                <li>RoyalTier7</li>
+                <li>Mechlord</li>
+            </tags>
+            <wornGraphicPath>Things/Pawn/Apparel/Phoenix_Apparel_MechanicArmor/Phoenix_Apparel_MechanicArmor</wornGraphicPath>
+        </apparel>
+        <!--tradeability>Sellable</tradeability>
+        <tradeTags Inherit="False">
+            <li>HiTechArmor</li>
+        </tradeTags-->
+    </ThingDef>
+</Defs>

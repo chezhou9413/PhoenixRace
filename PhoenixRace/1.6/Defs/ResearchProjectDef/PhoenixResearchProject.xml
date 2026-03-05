@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ResearchTabDef>
+		<defName>Phoenix_ResearchTab</defName>
+		<label>凤凰科技</label>
+		<generalTitle>凤凰科技树</generalTitle>
+		<generalDescription>TODO</generalDescription>
+	</ResearchTabDef>
+
+    <ResearchProjectTagDef>
+		<defName>PhoenixRefugeeStart</defName>
+	</ResearchProjectTagDef>
+
+    <ResearchProjectDef>
+		<defName>Phoenix_DailyApparelSkill</defName>
+		<label>凤凰日常服装制造</label>
+		<description>凤凰日常服装介绍</description>
+		<baseCost>300</baseCost>
+		<techLevel>Industrial</techLevel> <!--科技等级-->
+		<prerequisites>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>0</researchViewY>
+		<tab>Phoenix_ResearchTab</tab>
+		<tags>
+			<li>PhoenixRefugeeStart</li>
+		</tags>
+	</ResearchProjectDef>
+
+    <ResearchProjectDef>
+		<defName>Phoenix_LuxuryApparelSkill</defName>
+		<label>凤凰奢华服装制造</label>
+		<description>凤凰奢华服装介绍</description>
+		<baseCost>1200</baseCost>
+		<techLevel>Industrial</techLevel> <!--科技等级-->
+		<prerequisites>
+            <li>Phoenix_DailyApparelSkill</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0</researchViewY>
+		<tab>Phoenix_ResearchTab</tab>
+		<tags>
+			<li>PhoenixRefugeeStart</li>
+		</tags>
+	</ResearchProjectDef>
+
+    <ResearchProjectDef>
+		<defName>Phoenix_BattleApparelSkill</defName>
+		<label>凤凰战斗服装制造</label>
+		<description>凤凰战斗服装介绍</description>
+		<baseCost>2400</baseCost>
+		<techLevel>Industrial</techLevel> <!--科技等级-->
+		<prerequisites>
+            <li>Phoenix_DailyApparelSkill</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0.6</researchViewY>
+		<tab>Phoenix_ResearchTab</tab>
+		<tags>
+			<li>PhoenixRefugeeStart</li>
+		</tags>
+	</ResearchProjectDef>
+
+</Defs>
