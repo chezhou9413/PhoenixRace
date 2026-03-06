@@ -421,17 +421,6 @@
                 <relationChanceModifierChild>1</relationChanceModifierChild>
                 <relationChanceModifierSibling>1</relationChanceModifierSibling>
             </relationSettings>
-
-            <raceRestriction>
-                <weaponList>
-
-                </weaponList>
-                <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
-                <apparelList>
-                    <li>Phoenix_Apparel_MechanicArmor</li>
-                </apparelList>
-            </raceRestriction>
-
         </alienRace>
 
         <statBases>

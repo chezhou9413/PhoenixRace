@@ -1,0 +1,30 @@
+<Defs>
+    <ChezhouLib.LibDef.ClModule ParentName="ResourceBase">
+        <defName>ClModule_Reactor</defName>
+        <label>反应堆模块</label>
+        <description>微型聚变反应堆，能够持续稳定地为装备系统输出电能。细长的堆芯设计适合嵌入装甲夹层。</description>
+
+        <baseWidth>1</baseWidth>
+        <baseHeight>3</baseHeight>
+
+        <color>(1.0, 0.6, 0.1)</color>
+
+        <!-- 电容 +200，净产出 +20/t -->
+        <addmaxPower>200</addmaxPower>
+        <addPowerYield>20.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <MarketValue>600</MarketValue>
+            <Mass>3.0</Mass>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ChezhouLib.LibDef.ClModule>
+
+</Defs>

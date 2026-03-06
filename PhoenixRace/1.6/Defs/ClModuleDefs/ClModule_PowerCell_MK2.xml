@@ -1,0 +1,38 @@
+<Defs>
+
+    <!-- ═══════════════════════════════════════════════════════
+         能量电池 MK
+         尺寸: 1×2（竖条形）
+         效果: 提供 1000 电容上限，净产出 +20 W/t
+         用途: 纯供能模块，为高耗电模块提供能量储备
+    ═══════════════════════════════════════════════════════ -->
+    <ChezhouLib.LibDef.ClModule ParentName="ResourceBase">
+        <defName>ClModule_PowerCell_MK</defName>
+        <label>能量电池 MK1</label>
+        <description>高密度能量存储单元，提供大容量电力储备。竖条形设计节省横向空间。</description>
+
+        <!-- 矩形模块，不需要 occupiedCells，直接用 baseWidth/baseHeight -->
+        <baseWidth>1</baseWidth>
+        <baseHeight>2</baseHeight>
+
+        <color>(0.2, 0.5, 1.0)</color>
+
+        <!-- 电容 +1000，净产出 +20/t -->
+        <addmaxPower>1000</addmaxPower>
+        <addPowerYield>20.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>80</MaxHitPoints>
+            <MarketValue>350</MarketValue>
+            <Mass>1.2</Mass>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ChezhouLib.LibDef.ClModule>
+
+</Defs>

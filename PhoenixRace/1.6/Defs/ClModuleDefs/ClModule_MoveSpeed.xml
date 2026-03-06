@@ -1,0 +1,43 @@
+<Defs>
+    <!-- ═══════════════════════════════════════════════════════
+         移速模块
+         尺寸: 2×2（正方形）
+         效果: 移速 +0.2，耗电 -3 W/t
+         用途: 机动性强化，占用较大空间但效果显著
+    ═══════════════════════════════════════════════════════ -->
+    <ChezhouLib.LibDef.ClModule ParentName="ResourceBase">
+        <defName>ClModule_MoveSpeed</defName>
+        <label>移速模块</label>
+        <description>内置步态优化处理器，持续分析并调整穿戴者的运动模式，显著提升移动速度。</description>
+
+        <baseWidth>2</baseWidth>
+        <baseHeight>2</baseHeight>
+
+        <color>(0.3, 0.9, 0.5)</color>
+
+        <!-- 无电容加成，只消耗电力 -->
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-3.0</addPowerYield>
+
+        <!-- 移速 +0.2 -->
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <MoveSpeed>0.2</MoveSpeed>
+            </statOffsets>
+        </worker>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <MarketValue>400</MarketValue>
+            <Mass>1.8</Mass>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ChezhouLib.LibDef.ClModule>
+
+</Defs>

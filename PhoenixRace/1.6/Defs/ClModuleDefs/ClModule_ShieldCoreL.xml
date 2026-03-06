@@ -1,0 +1,49 @@
+<Defs>
+    <ChezhouLib.LibDef.ClModule ParentName="ResourceBase">
+        <defName>ClModule_ShieldCoreL</defName>
+        <label>L形护盾核心</label>
+        <description>高级L形护盾核心，非对称结构设计使其能在占用更少空间的同时提供强力防护。旋转后可适配不同装配方案。</description>
+        <baseWidth>2</baseWidth>
+        <baseHeight>3</baseHeight>
+        <occupiedCells>
+            <li>
+                <x>0</x>
+                <z>0</z>
+            </li>
+            <li>
+                <x>0</x>
+                <z>1</z>
+            </li>
+            <li>
+                <x>0</x>
+                <z>2</z>
+            </li>
+            <li>
+                <x>1</x>
+                <z>2</z>
+            </li>
+        </occupiedCells>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <Phoenix_ShieldOffset>50.0</Phoenix_ShieldOffset>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>150</addmaxPower>
+        <addPowerYield>-18.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MaxHitPoints>140</MaxHitPoints>
+            <MarketValue>650</MarketValue>
+            <Mass>2.5</Mass>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ChezhouLib.LibDef.ClModule>
+</Defs>
