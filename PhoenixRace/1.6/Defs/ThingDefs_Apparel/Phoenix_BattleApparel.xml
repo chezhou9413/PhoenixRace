@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-    <ThingDef Name="PhoenixMechanicArmorBase" ParentName="ApparelBase" Abstract="True">
+    
+    <ThingDef Name="PhoenixApparelBase" ParentName="ApparelBase" Abstract="True">
         <thingClass>Apparel</thingClass>
         <comps>
             <li Class="ChezhouLib.comp.ApparelAddBodyAddonCompProperties">
@@ -11,14 +11,24 @@
             </li>
         </comps>
         <recipeMaker>
-            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-            <workSkill>Crafting</workSkill>
-            <effectWorking>Smith</effectWorking>
-            <soundWorking>Recipe_Machining</soundWorking>
+            <unfinishedThingDef>Phoenix_UnfinishedArmor</unfinishedThingDef>           <!--制作过程中显示的未完成物品-->
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat> <!--受通用劳动速度影响-->
+            <workSkill>Crafting</workSkill> <!--工作执行的类别-->
+        </recipeMaker>
+        <apparel>
+            <tags>
+                <li>RoyalTier7</li> <!--皇权衣物等级-->
+            </tags>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef Name="PhoenixMechanicArmorBase" ParentName="PhoenixApparelBase" Abstract="True">
+        <recipeMaker>
+            <effectWorking>Smith</effectWorking> <!--工作执行的特效-->
+            <soundWorking>Recipe_Machining</soundWorking> <!--工作执行的声效-->
             <recipeUsers>
                 <li>TableMachining</li>
             </recipeUsers>
-            <unfinishedThingDef>Phoenix_UnfinishedArmor</unfinishedThingDef>
             <defaultIngredientFilter>
                 <categories>
                     <li>Root</li>
@@ -46,7 +56,6 @@
                 <li>UltraMechtech</li>
                 <li>Phoenix_BattleApparelSkill</li>
             </researchPrerequisites>
-            <unfinishedThingDef>Phoenix_UnfinishedArmor</unfinishedThingDef>
             <displayPriority>530</displayPriority>            <!--UI显示优先级-->
         </recipeMaker>
         <graphicData>
@@ -102,7 +111,6 @@
                 <li>Legs</li>
             </bodyPartGroups>
             <tags>
-                <li>RoyalTier7</li>
                 <li>Mechlord</li>
             </tags>
             <wornGraphicPath>Things/Pawn/Apparel/Phoenix_Apparel_MechanicArmor/Phoenix_Apparel_MechanicArmor</wornGraphicPath>
@@ -112,4 +120,86 @@
             <li>HiTechArmor</li>
         </tradeTags-->
     </ThingDef>
+
+    <ThingDef Name="PhoenixCombatSuitBase" ParentName="PhoenixApparelBase" Abstract="True">
+        <recipeMaker>
+            <effectWorking>Smith</effectWorking> <!--工作执行的特效-->
+            <soundWorking>Recipe_Machining</soundWorking> <!--工作执行的声效-->
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <defaultIngredientFilter>
+                <categories>
+                    <li>Root</li>
+                </categories>
+                <disallowedThingDefs>                    <!--不让用的材料-->
+                    <li>Gold</li>
+                    <li>Silver</li>
+                    <li>Plasteel</li>
+                    <li>Jade</li>
+                    <li>Uranium</li>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">Obsidian</li>
+                </disallowedThingDefs>
+            </defaultIngredientFilter>
+            <researchPrerequisites>                <!--科技前置-->
+                <li>Phoenix_BattleApparelSkill</li>
+            </researchPrerequisites>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="PhoenixCombatSuitBase">
+        <defName>Phoenix_Apparel_TightCombatSuit</defName>
+        <label>凤凰紧身作战服</label>
+        <description>凤凰紧身作战服</description>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>ComplexClothing</li>
+                <li>Phoenix_BattleApparelSkill</li>
+            </researchPrerequisites>
+            <displayPriority>205</displayPriority>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Pawn/Apparel/Phoenix_Apparel_TightCombatSuit/Phoenix_Apparel_TightCombatSuit</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>2.0</drawSize>
+            <drawOffset>(-0.2,0,0.2)</drawOffset>
+        </graphicData>
+        <costStuffCount>120</costStuffCount>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+        </stuffCategories>
+        <thingCategories>
+            <li>ApparelMisc</li>
+        </thingCategories>
+        <statBases>
+            <Mass>4</Mass>            <!--重量-->
+            <ArmorRating_Sharp>0.91</ArmorRating_Sharp>            <!--利防-->
+            <ArmorRating_Blunt>0.91</ArmorRating_Blunt>            <!--钝防-->
+            <ArmorRating_Heat>0.91</ArmorRating_Heat>            <!--热防-->
+            <Insulation_Cold>64</Insulation_Cold>            <!--冷温适应-->
+            <Insulation_Heat>64</Insulation_Heat>            <!--热温适应-->
+            <EquipDelay>1</EquipDelay>            <!--装备时间-->
+        </statBases>
+        <equippedStatOffsets>
+            <HackingSpeed>1.5</HackingSpeed>            <!--骇入速度-->
+            <HackingStealth>1.5</HackingStealth>            <!--骇入隐蔽-->
+            <ShootingAccuracyPawn>5</ShootingAccuracyPawn>            <!--射击准度-->
+            <MeleeHitChance>5</MeleeHitChance>            <!--近战命中-->
+            <MoveSpeed>1.5</MoveSpeed>            <!--移动速度-->
+        </equippedStatOffsets>
+        <apparel>
+            <layers>                <!--装备层-->
+                <li>OnSkin</li> <!--贴身-->
+            </layers>
+            <bodyPartGroups>                <!--装备部位-->
+                <li>Torso</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Pawn/Apparel/Phoenix_Apparel_TightCombatSuit/Phoenix_Apparel_TightCombatSuit</wornGraphicPath>
+        </apparel>
+    </ThingDef>
+
 </Defs>
