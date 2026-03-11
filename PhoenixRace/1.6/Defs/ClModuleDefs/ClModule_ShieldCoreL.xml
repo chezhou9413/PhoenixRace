@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <ChezhouLib.LibDef.ClModule ParentName="ResourceBase">
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
         <defName>ClModule_ShieldCoreL</defName>
         <label>L形护盾核心</label>
         <description>高级L形护盾核心，非对称结构设计使其能在占用更少空间的同时提供强力防护。旋转后可适配不同装配方案。</description>
@@ -38,12 +39,7 @@
         </graphicData>
 
         <statBases>
-            <MaxHitPoints>140</MaxHitPoints>
             <MarketValue>650</MarketValue>
-            <Mass>2.5</Mass>
         </statBases>
-        <thingCategories>
-            <li>Manufactured</li>
-        </thingCategories>
     </ChezhouLib.LibDef.ClModule>
 </Defs>

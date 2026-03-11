@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
+        <defName>ClModule_ShieldEnhanceModule_I</defName>
+        <label>护盾增幅模块I</label>
+        <description>护盾增幅模块I</description>
+        <baseWidth>1</baseWidth>
+        <baseHeight>2</baseHeight>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <Phoenix_ShieldMultiplier>1.2</Phoenix_ShieldMultiplier>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-100.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+    </ChezhouLib.LibDef.ClModule>
+
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
+        <defName>ClModule_ShieldEnhanceModule_II</defName>
+        <label>护盾增幅模块II</label>
+        <description>护盾增幅模块II</description>
+        <baseWidth>1</baseWidth>
+        <baseHeight>3</baseHeight>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <Phoenix_ShieldMultiplier>1.4</Phoenix_ShieldMultiplier>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-300.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+    </ChezhouLib.LibDef.ClModule>
+
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
+        <defName>ClModule_ShieldEnhanceModule_III</defName>
+        <label>护盾增幅模块III</label>
+        <description>护盾增幅模块III</description>
+        <baseWidth>2</baseWidth>
+        <baseHeight>2</baseHeight>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <Phoenix_ShieldMultiplier>1.6</Phoenix_ShieldMultiplier>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-600.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+    </ChezhouLib.LibDef.ClModule>
+
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
+        <defName>ClModule_ShieldCapacityModule_I</defName>
+        <label>护盾容量模块I</label>
+        <description>护盾容量模块I</description>
+        <baseWidth>1</baseWidth>
+        <baseHeight>2</baseHeight>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <Phoenix_ShieldOffset>10</Phoenix_ShieldOffset>
+                <Phoenix_ShieldRegenOffset>1</Phoenix_ShieldRegenOffset>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-100.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+    </ChezhouLib.LibDef.ClModule>
+
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
+        <defName>ClModule_ShieldCapacityModule_II</defName>
+        <label>护盾容量模块II</label>
+        <description>护盾容量模块II</description>
+        <baseWidth>1</baseWidth>
+        <baseHeight>3</baseHeight>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <Phoenix_ShieldOffset>20</Phoenix_ShieldOffset>
+                <Phoenix_ShieldRegenOffset>2</Phoenix_ShieldRegenOffset>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-300.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+    </ChezhouLib.LibDef.ClModule>
+
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
+        <defName>ClModule_ShieldCapacityModule_III</defName>
+        <label>护盾容量模块III</label>
+        <description>护盾容量模块III</description>
+        <baseWidth>2</baseWidth>
+        <baseHeight>2</baseHeight>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <Phoenix_ShieldOffset>30</Phoenix_ShieldOffset>
+                <Phoenix_ShieldRegenOffset>3</Phoenix_ShieldRegenOffset>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-600.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+    </ChezhouLib.LibDef.ClModule>
+
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
+        <defName>ClModule_ShieldRecoverModule_I</defName>
+        <label>护盾恢复模块I</label>
+        <description>护盾恢复模块I</description>
+        <baseWidth>1</baseWidth>
+        <baseHeight>2</baseHeight>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <Phoenix_ShieldRegenMultiplier>1.08</Phoenix_ShieldRegenMultiplier>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-100.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+    </ChezhouLib.LibDef.ClModule>
+
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
+        <defName>ClModule_ShieldRecoverModule_II</defName>
+        <label>护盾恢复模块II</label>
+        <description>护盾恢复模块II</description>
+        <baseWidth>1</baseWidth>
+        <baseHeight>3</baseHeight>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <Phoenix_ShieldRegenMultiplier>1.16</Phoenix_ShieldRegenMultiplier>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-300.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+    </ChezhouLib.LibDef.ClModule>
+
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
+        <defName>ClModule_ShieldRecoverModule_III</defName>
+        <label>护盾恢复模块III</label>
+        <description>护盾恢复模块III</description>
+        <baseWidth>2</baseWidth>
+        <baseHeight>2</baseHeight>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <Phoenix_ShieldRegenMultiplier>1.24</Phoenix_ShieldRegenMultiplier>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-600.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+    </ChezhouLib.LibDef.ClModule>
+
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
+        <defName>ClModule_ShieldRestartModule</defName>
+        <label>护盾重启模块</label>
+        <description>护盾重启模块</description>
+        <baseWidth>2</baseWidth>
+        <baseHeight>2</baseHeight>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <Phoenix_ShieldBreakRecoveryTime>-100</Phoenix_ShieldBreakRecoveryTime>
+                <Phoenix_ShieldMultiplier>0.7</Phoenix_ShieldMultiplier>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-600.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+    </ChezhouLib.LibDef.ClModule>
+
+
+
+</Defs>

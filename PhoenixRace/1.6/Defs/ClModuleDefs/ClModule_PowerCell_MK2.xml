@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
     <!-- ═══════════════════════════════════════════════════════
@@ -6,7 +7,7 @@
          效果: 提供 1000 电容上限，净产出 +20 W/t
          用途: 纯供能模块，为高耗电模块提供能量储备
     ═══════════════════════════════════════════════════════ -->
-    <ChezhouLib.LibDef.ClModule ParentName="ResourceBase">
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
         <defName>ClModule_PowerCell_MK</defName>
         <label>能量电池 MK1</label>
         <description>高密度能量存储单元，提供大容量电力储备。竖条形设计节省横向空间。</description>
@@ -26,13 +27,8 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>
-            <MaxHitPoints>80</MaxHitPoints>
             <MarketValue>350</MarketValue>
-            <Mass>1.2</Mass>
         </statBases>
-        <thingCategories>
-            <li>Manufactured</li>
-        </thingCategories>
     </ChezhouLib.LibDef.ClModule>
 
 </Defs>

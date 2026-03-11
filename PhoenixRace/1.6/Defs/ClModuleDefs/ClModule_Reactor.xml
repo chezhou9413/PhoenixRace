@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <ChezhouLib.LibDef.ClModule ParentName="ResourceBase">
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
         <defName>ClModule_Reactor</defName>
         <label>反应堆模块</label>
         <description>微型聚变反应堆，能够持续稳定地为装备系统输出电能。细长的堆芯设计适合嵌入装甲夹层。</description>
@@ -18,13 +19,8 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>
-            <MaxHitPoints>120</MaxHitPoints>
             <MarketValue>600</MarketValue>
-            <Mass>3.0</Mass>
         </statBases>
-        <thingCategories>
-            <li>Manufactured</li>
-        </thingCategories>
     </ChezhouLib.LibDef.ClModule>
 
 </Defs>
