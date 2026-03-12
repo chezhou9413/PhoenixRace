@@ -153,10 +153,6 @@
         <label>凤凰紧身作战服</label>
         <description>凤凰紧身作战服</description>
         <recipeMaker>
-            <researchPrerequisites>
-                <li>ComplexClothing</li>
-                <li>Phoenix_BattleApparelSkill</li>
-            </researchPrerequisites>
             <displayPriority>205</displayPriority>
         </recipeMaker>
         <graphicData>
@@ -174,7 +170,7 @@
             <li>ApparelMisc</li>
         </thingCategories>
         <statBases>
-            <Mass>4</Mass>            <!--重量-->
+            <Mass>2.5</Mass>            <!--重量-->
             <ArmorRating_Sharp>0.91</ArmorRating_Sharp>            <!--利防-->
             <ArmorRating_Blunt>0.91</ArmorRating_Blunt>            <!--钝防-->
             <ArmorRating_Heat>0.91</ArmorRating_Heat>            <!--热防-->
