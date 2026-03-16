@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
+        <defName>ClModule_FlameRetardantModule</defName>
+        <label>隔热阻燃模块</label>
+        <description>隔热阻燃模块</description>
+        <baseWidth>1</baseWidth>
+        <baseHeight>2</baseHeight>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <Flammability>0</Flammability>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-100.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+    </ChezhouLib.LibDef.ClModule>
+
+    <ChezhouLib.LibDef.ClModule ParentName="PhoenixModuleBase">
+        <defName>ClModule_SelfLoopModule</defName>
+        <label>内循环模块</label>
+        <description>内循环模块</description>
+        <baseWidth>1</baseWidth>
+        <baseHeight>1</baseHeight>
+        <worker Class="ChezhouLib.ClAppereModdleWorker.AppereModdleWorker_StatOffsets">
+            <statOffsets>
+                <ToxicResistance>0.3</ToxicResistance>
+                <VacuumResistance>0.3</VacuumResistance>
+            </statOffsets>
+        </worker>
+        <color>(0.4, 0.2, 1.0)</color>
+        <addmaxPower>0</addmaxPower>
+        <addPowerYield>-50.0</addPowerYield>
+
+        <graphicData>
+            <texPath>Things/Item/Special/AIPersonaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+    </ChezhouLib.LibDef.ClModule>
+
+</Defs>
