@@ -251,4 +251,112 @@
         </apparel>
     </ThingDef>
 
+    <ThingDef ParentName="PhoenixCombatSuitBase">
+        <defName>Phoenix_Apparel_TrailblazerStanderdArmor</defName>
+        <label>开拓者制式护甲</label>
+        <description>开拓者制式护甲</description>
+        <recipeMaker>
+            <displayPriority>205</displayPriority>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Pawn/Apparel/Phoenix_Apparel_TrailblazerStanderdArmor/Phoenix_Apparel_TrailblazerStanderdArmor</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>2.0</drawSize>
+            <drawOffset>(-0.2,0,0.2)</drawOffset>
+        </graphicData>
+        <costStuffCount>120</costStuffCount>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+        </stuffCategories>
+        <thingCategories>
+            <li>ApparelMisc</li>
+        </thingCategories>
+        <statBases>
+            <Mass>2.5</Mass>            <!--重量-->
+            <ArmorRating_Sharp>0.91</ArmorRating_Sharp>            <!--利防-->
+            <ArmorRating_Blunt>0.91</ArmorRating_Blunt>            <!--钝防-->
+            <ArmorRating_Heat>0.91</ArmorRating_Heat>            <!--热防-->
+            <Insulation_Cold>64</Insulation_Cold>            <!--冷温适应-->
+            <Insulation_Heat>64</Insulation_Heat>            <!--热温适应-->
+            <EquipDelay>1</EquipDelay>            <!--装备时间-->
+        </statBases>
+        <equippedStatOffsets>
+            <HackingSpeed>1.5</HackingSpeed>            <!--骇入速度-->
+            <HackingStealth>1.5</HackingStealth>            <!--骇入隐蔽-->
+            <ShootingAccuracyPawn>5</ShootingAccuracyPawn>            <!--射击准度-->
+            <MeleeHitChance>5</MeleeHitChance>            <!--近战命中-->
+            <MoveSpeed>1.5</MoveSpeed>            <!--移动速度-->
+        </equippedStatOffsets>
+        <apparel>
+            <layers>                <!--装备层-->
+                <li>Middle</li>     <!--夹层-->
+                <li>Shell</li>    <!--外套-->
+            </layers>
+            <bodyPartGroups>                <!--装备部位-->
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Pawn/Apparel/Phoenix_Apparel_TrailblazerStanderdArmor/Phoenix_Apparel_TrailblazerStanderdArmor</wornGraphicPath>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="PhoenixCombatSuitBase">
+        <defName>Phoenix_Apparel_PioneerIIHeavyArmor</defName>
+        <label>先驱者II重型护甲</label>
+        <description>先驱者II重型护甲</description>
+        <recipeMaker>
+            <displayPriority>205</displayPriority>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Pawn/Apparel/Phoenix_Apparel_PioneerIIHeavyArmor/Phoenix_Apparel_PioneerIIHeavyArmor</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>2.0</drawSize>
+            <drawOffset>(-0.2,0,0.2)</drawOffset>
+        </graphicData>
+        <costStuffCount>120</costStuffCount>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+        </stuffCategories>
+        <thingCategories>
+            <li>ApparelMisc</li>
+        </thingCategories>
+        <statBases>
+            <Mass>2.5</Mass>            <!--重量-->
+            <ArmorRating_Sharp>0.91</ArmorRating_Sharp>            <!--利防-->
+            <ArmorRating_Blunt>0.91</ArmorRating_Blunt>            <!--钝防-->
+            <ArmorRating_Heat>0.91</ArmorRating_Heat>            <!--热防-->
+            <Insulation_Cold>64</Insulation_Cold>            <!--冷温适应-->
+            <Insulation_Heat>64</Insulation_Heat>            <!--热温适应-->
+            <EquipDelay>1</EquipDelay>            <!--装备时间-->
+        </statBases>
+        <equippedStatOffsets>
+            <HackingSpeed>1.5</HackingSpeed>            <!--骇入速度-->
+            <HackingStealth>1.5</HackingStealth>            <!--骇入隐蔽-->
+            <ShootingAccuracyPawn>5</ShootingAccuracyPawn>            <!--射击准度-->
+            <MeleeHitChance>5</MeleeHitChance>            <!--近战命中-->
+            <MoveSpeed>1.5</MoveSpeed>            <!--移动速度-->
+        </equippedStatOffsets>
+        <apparel>
+            <layers>                <!--装备层-->
+                <li>Middle</li>     <!--夹层-->
+                <li>Shell</li>    <!--外套-->
+            </layers>
+            <bodyPartGroups>                <!--装备部位-->
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Pawn/Apparel/Phoenix_Apparel_PioneerIIHeavyArmor/Phoenix_Apparel_PioneerIIHeavyArmor</wornGraphicPath>
+        </apparel>
+    </ThingDef>
+
+
+
 </Defs>
