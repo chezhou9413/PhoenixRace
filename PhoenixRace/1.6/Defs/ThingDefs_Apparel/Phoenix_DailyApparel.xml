@@ -31,7 +31,7 @@
     <ThingDef ParentName="PhoenixDailyApparelBase">
         <defName>Phoenix_Apparel_DustCoat</defName>
         <label>凤凰防尘大衣</label>
-        <description>凤凰防尘大衣</description>
+        <description>宽大的防尘大衣，有足够的空间容纳凤凰们收起后贴在身上的羽翼，不过绝大多数凤凰依然会把她们珍视的羽翼伸出衣外，振翅后飞扬的尘土也无法沾染这件大衣分毫</description>
         <recipeMaker>
             <displayPriority>205</displayPriority>
         </recipeMaker>
