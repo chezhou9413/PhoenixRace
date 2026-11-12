@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SoundDef>
+    <defName>Phoenix_TurretFire</defName>
+    <context>MapOnly</context>
+    <maxVoices>6</maxVoices>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder"><clipFolderPath>Phoenix/Turret/Fire</clipFolderPath></li>
+        </grains>
+        <volumeRange>34~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Phoenix_TurretTail</defName>
+    <context>MapOnly</context>
+    <maxVoices>2</maxVoices>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>true</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>Phoenix/Turret/Tail</clipPath></li>
+        </grains>
+        <volumeRange>17~20</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>

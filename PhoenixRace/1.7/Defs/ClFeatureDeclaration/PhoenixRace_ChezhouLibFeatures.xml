@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- 文件职责：声明 PhoenixRace 需要启用的 ChezhouLib 兼容功能。 -->
+
+    <!-- Def 职责：启用 HAR 运行时 BodyAddon 补丁，让装备声明的 bodyAddonDefs 能追加到渲染树。 -->
+    <ChezhouLib.LibDef.ClFeatureDeclarationDef>
+        <defName>PhoenixRace_Enable_HARBodyAddon</defName>
+        <feature>HARBodyAddon</feature>
+        <targetPackageIds>
+            <li>chezhou.Race.PhoenixRace</li>
+        </targetPackageIds>
+    </ChezhouLib.LibDef.ClFeatureDeclarationDef>
+</Defs>

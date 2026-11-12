@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="UnfinishedBase">
+        <defName>Phoenix_UnfinishedArmor</defName>
+        <label>凤凰的未完成护甲</label>
+        <description>凤凰的未完成护甲描述</description>
+        <graphicData>
+            <texPath>Things/Unfinished/Phoenix_UnfinishedArmor</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <stuffCategories Inherit="false" />
+    </ThingDef>
+
+</Defs>

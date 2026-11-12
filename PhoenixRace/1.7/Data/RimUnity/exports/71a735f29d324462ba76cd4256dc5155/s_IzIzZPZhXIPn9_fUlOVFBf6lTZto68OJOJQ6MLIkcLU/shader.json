@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "shaderName": "ShieldEnergyFlow",
+  "profile": "world",
+  "uiMasks": false,
+  "colorSpace": "Gamma",
+  "grabTexture": null,
+  "geometry": null,
+  "vertexEntry": "vert",
+  "fragmentEntry": "frag",
+  "vertexFile": "shader.vert.glsl",
+  "fragmentFile": "shader.frag.glsl",
+  "arrays": {},
+  "properties": [
+    {
+      "name": "_MainTex",
+      "displayName": "Shield Shape (RGB + Alpha)",
+      "type": "2D",
+      "attributes": [],
+      "defaultValue": null,
+      "defaultTexture": "white",
+      "range": null
+    },
+    {
+      "name": "_NoiseTex",
+      "displayName": "Noise (Energy)",
+      "type": "2D",
+      "attributes": [],
+      "defaultValue": null,
+      "defaultTexture": "white",
+      "range": null
+    },
+    {
+      "name": "_Color",
+      "displayName": "Tint Color",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_FlowSpeed",
+      "displayName": "Flow Speed (X, Y)",
+      "type": "Vector",
+      "attributes": [],
+      "defaultValue": [
+        0.1,
+        0.1,
+        0,
+        0
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_NoiseStrength",
+      "displayName": "Energy Flicker",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.3
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "_AlphaBoost",
+      "displayName": "Overall Opacity",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        1
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        5
+      ]
+    }
+  ],
+  "tags": {
+    "Queue": "Transparent",
+    "RenderType": "Transparent"
+  },
+  "states": {
+    "Blend": "SrcAlpha OneMinusSrcAlpha",
+    "ZWrite": "Off",
+    "Cull": "Off"
+  },
+  "keywords": [],
+  "keywordGroups": [],
+  "approximations": []
+}

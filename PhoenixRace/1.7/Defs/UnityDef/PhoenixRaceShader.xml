@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ChezhouLib.LibDef.ClAssetLord>
+    <defName>PhoenixRaceLord</defName>
+    <label>凤凰族预制体管理</label>
+    <unityAssetMount>
+      <li>
+        <key>Phoenix_PhoenixShid</key>
+        <value>prefab/PhoenixRace/PhoenixShid.prefab</value>
+      </li>
+      <li>
+        <key>taiyanghongzha</key>
+        <value>prefab/PhoenixRace/taiyanghongzha.prefab</value>
+      </li>
+      <li>
+        <key>hongzhaExplosion</key>
+        <value>prefab/PhoenixRace/hongzhaExplosion.prefab</value>
+      </li>
+      <li>
+        <key>PHFEIJI1</key>
+        <value>prefab/PhoenixRace/PHFEIJI1.prefab</value>
+      </li>
+    </unityAssetMount>
+    <rimUnityBundle>phoenixraceobj</rimUnityBundle>
+  </ChezhouLib.LibDef.ClAssetLord>
+  <ChezhouLib.LibDef.ClAssetLord>
+    <defName>PhoenixRaceViewportLord</defName>
+    <label>凤凰族舷窗界面资源管理</label>
+    <unityAssetMount>
+      <li>
+        <key>PhoenixSpaceViewportUI</key>
+        <value>Prefabs/PhoenixRace/PhoenixSpaceViewportUI.prefab</value>
+      </li>
+      <li>
+        <key>PhoenixHologramWorld</key>
+        <value>Prefabs/PhoenixRace/PhoenixHologramWorld.prefab</value>
+      </li>
+    </unityAssetMount>
+    <rimUnityBundle>phoenixraceviewportui</rimUnityBundle>
+  </ChezhouLib.LibDef.ClAssetLord>
+  <ChezhouLib.LibDef.ClNativeResourceProvider Class="PhoenixRaceLib.Assets.PhoenixResourceProvider">
+    <defName>Phoenix_RimUnityResources</defName>
+  </ChezhouLib.LibDef.ClNativeResourceProvider>
+</Defs>

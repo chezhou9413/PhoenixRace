@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- 文件职责：定义凤凰通用型三级甲，并通过 ChezhouLib 给穿戴状态追加发光覆盖层。 -->
+
+    <!-- Def 职责：凤凰通用型三级甲，提供通用重型防护、模块槽位和覆盖在主体服装上的发光层。 -->
+    <ThingDef ParentName="ApparelBase">
+        <defName>Phoenix_Apparel_GenericTier3Armor</defName>
+        <label>凤凰通用型三级甲</label>
+        <description>凤凰族通用型三级战斗装甲，兼顾防护、环境适应和模块化扩展能力。</description>
+        <thingClass>Apparel</thingClass>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Things/Pawn/Apparel/Phoenix_Apparel_GenericTier3Armor/Phoenix_Apparel_GenericTier3Armor</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+            <drawOffset>(-0.2,0,0.2)</drawOffset>
+        </graphicData>
+        <recipeMaker>
+            <unfinishedThingDef>Phoenix_UnfinishedArmor</unfinishedThingDef>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <researchPrerequisites>
+                <li>Phoenix_BattleApparelSkill</li>
+            </researchPrerequisites>
+            <displayPriority>520</displayPriority>
+            <defaultIngredientFilter>
+                <categories>
+                    <li>Root</li>
+                </categories>
+                <disallowedThingDefs>
+                    <li>Gold</li>
+                    <li>Silver</li>
+                    <li>Plasteel</li>
+                    <li>Jade</li>
+                    <li>Uranium</li>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">Obsidian</li>
+                </disallowedThingDefs>
+            </defaultIngredientFilter>
+        </recipeMaker>
+        <costList>
+            <Plasteel>160</Plasteel>
+            <ComponentSpacer>8</ComponentSpacer>
+            <NanostructuringChip>1</NanostructuringChip>
+            <PowerfocusChip>1</PowerfocusChip>
+        </costList>
+        <statBases>
+            <MaxHitPoints>420</MaxHitPoints>
+            <WorkToMake>90000</WorkToMake>
+            <Mass>10</Mass>
+            <MarketValue>2600</MarketValue>
+            <Flammability>0.2</Flammability>
+            <DeteriorationRate>0.7</DeteriorationRate>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.1</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.2</ArmorRating_Heat>
+            <Insulation_Cold>80</Insulation_Cold>
+            <Insulation_Heat>80</Insulation_Heat>
+            <EquipDelay>4</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.15</MoveSpeed>
+            <ShootingAccuracyPawn>1.0</ShootingAccuracyPawn>
+            <MeleeHitChance>1.0</MeleeHitChance>
+            <ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.4</VacuumResistance>
+        </equippedStatOffsets>
+        <thingCategories>
+            <li>ApparelMisc</li>
+        </thingCategories>
+        <apparel>
+            <layers>
+                <li>Shell</li>
+            </layers>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <tags>
+                <li>Armor</li>
+                <li>RoyalTier7</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+            <wornGraphicPath>AlienRace/Phoenix/Null/Null</wornGraphicPath>
+        </apparel>
+        <comps>
+            <li Class="ChezhouLib.comp.ApparelAddBodyAddonCompProperties">
+                <targetRaces>
+                    <li>PhoenixRace</li>
+                </targetRaces>
+                <bodyAddonDefs>
+                    <li>
+                        <name>Phoenix_GenericTier3ArmorBody</name>
+                        <userCustomizable>false</userCustomizable>
+                        <path>Things/Pawn/Apparel/Phoenix_Apparel_GenericTier3Armor/Phoenix_Apparel_GenericTier3Armor</path>
+                        <colorChannel>Appare</colorChannel>
+                        <colorOverrideOne>(255,255,255)</colorOverrideOne>
+                        <colorOverrideTwo>(255,255,255)</colorOverrideTwo>
+                        <shaderType>Cutout</shaderType>
+                        <inFrontOfBody>true</inFrontOfBody>
+                        <layerInvert>false</layerInvert>
+                        <flipWest>true</flipWest>
+                        <angle>0</angle>
+                        <drawSize>1</drawSize>
+                        <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+                        <defaultOffset>Center</defaultOffset>
+                        <alignWithHead>false</alignWithHead>
+                        <bodytypeGraphics>
+                            <Female>Things/Pawn/Apparel/Phoenix_Apparel_GenericTier3Armor/Phoenix_Apparel_GenericTier3Armor</Female>
+                        </bodytypeGraphics>
+                        <offsets>
+                            <south>
+                                <layerOffset>-0.29</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </south>
+                            <north>
+                                <layerOffset>-0.29</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </north>
+                            <east>
+                                <layerOffset>-0.29</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </east>
+                            <west>
+                                <layerOffset>-0.29</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </west>
+                        </offsets>
+                    </li>
+                    <li>
+                        <name>Phoenix_GenericTier3ArmorGlow</name>
+                        <userCustomizable>false</userCustomizable>
+                        <path>Things/Pawn/Apparel/Phoenix_Apparel_GenericTier3Armor/Phoenix_Apparel_GenericTier3Armor_Glow</path>
+                        <colorChannel>Appare</colorChannel>
+                        <colorOverrideOne>(255,255,255)</colorOverrideOne>
+                        <colorOverrideTwo>(255,255,255)</colorOverrideTwo>
+                        <shaderType>MoteGlow</shaderType>
+                        <inFrontOfBody>true</inFrontOfBody>
+                        <layerInvert>false</layerInvert>
+                        <flipWest>true</flipWest>
+                        <angle>0</angle>
+                        <drawSize>1</drawSize>
+                        <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+                        <defaultOffset>Center</defaultOffset>
+                        <alignWithHead>false</alignWithHead>
+                        <bodytypeGraphics>
+                            <Female>Things/Pawn/Apparel/Phoenix_Apparel_GenericTier3Armor/Phoenix_Apparel_GenericTier3Armor_Glow</Female>
+                        </bodytypeGraphics>
+                        <offsets>
+                            <south>
+                                <layerOffset>-0.289</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </south>
+                            <north>
+                                <layerOffset>-0.289</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </north>
+                            <east>
+                                <layerOffset>-0.289</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </east>
+                            <west>
+                                <layerOffset>-0.289</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </west>
+                        </offsets>
+                    </li>
+                </bodyAddonDefs>
+            </li>
+            <li Class="ChezhouLib.ClThingComp.ThingCompProperties_AppereModdle">
+                <Cols>5</Cols>
+                <Rows>5</Rows>
+                <initPower>500</initPower>
+                <maxPower>1000</maxPower>
+                <PowerYield>0</PowerYield>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Def 职责：凤凰通用型三级甲头盔，提供头部防护、发光覆盖层，并在穿戴时隐藏头发与头冠羽饰。 -->
+    <ThingDef ParentName="ApparelBase">
+        <defName>Phoenix_Apparel_GenericTier3Helmet</defName>
+        <label>凤凰通用型三级甲头盔</label>
+        <description>凤凰族通用型三级战斗头盔，内置发光识别组件，并能收束头发与羽饰以适配密闭装甲外形。</description>
+        <thingClass>Apparel</thingClass>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Things/Pawn/Apparel/Phoenix_Apparel_GenericTier3Helmet/Phoenix_Apparel_GenericTier3Helmet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <recipeMaker>
+            <unfinishedThingDef>Phoenix_UnfinishedArmor</unfinishedThingDef>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <researchPrerequisites>
+                <li>Phoenix_BattleApparelSkill</li>
+            </researchPrerequisites>
+            <displayPriority>521</displayPriority>
+            <defaultIngredientFilter>
+                <categories>
+                    <li>Root</li>
+                </categories>
+                <disallowedThingDefs>
+                    <li>Gold</li>
+                    <li>Silver</li>
+                    <li>Plasteel</li>
+                    <li>Jade</li>
+                    <li>Uranium</li>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">Obsidian</li>
+                </disallowedThingDefs>
+            </defaultIngredientFilter>
+        </recipeMaker>
+        <costList>
+            <Plasteel>60</Plasteel>
+            <ComponentSpacer>3</ComponentSpacer>
+            <NanostructuringChip>1</NanostructuringChip>
+        </costList>
+        <statBases>
+            <MaxHitPoints>260</MaxHitPoints>
+            <WorkToMake>36000</WorkToMake>
+            <Mass>3</Mass>
+            <MarketValue>900</MarketValue>
+            <Flammability>0.2</Flammability>
+            <DeteriorationRate>0.7</DeteriorationRate>
+            <ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.1</ArmorRating_Heat>
+            <Insulation_Cold>20</Insulation_Cold>
+            <Insulation_Heat>20</Insulation_Heat>
+            <EquipDelay>2.5</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.2</VacuumResistance>
+        </equippedStatOffsets>
+        <thingCategories>
+            <li>ApparelMisc</li>
+        </thingCategories>
+        <apparel>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <bodyPartGroups>
+                <li>UpperHead</li>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <tags>
+                <li>Armor</li>
+                <li>RoyalTier7</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+            <wornGraphicPath>AlienRace/Phoenix/Null/Null</wornGraphicPath>
+        </apparel>
+        <comps>
+            <li Class="ChezhouLib.comp.ApparelAddBodyAddonCompProperties">
+                <targetRaces>
+                    <li>PhoenixRace</li>
+                </targetRaces>
+                <bodyAddonHidden>
+                    <li>Phoenix_Hair</li>
+                    <li>Phoenix_EarFeathers</li>
+                </bodyAddonHidden>
+                <bodyAddonDefs>
+                    <li>
+                        <name>Phoenix_GenericTier3HelmetBody</name>
+                        <userCustomizable>false</userCustomizable>
+                        <path>Things/Pawn/Apparel/Phoenix_Apparel_GenericTier3Helmet/Phoenix_Apparel_GenericTier3Helmet</path>
+                        <colorChannel>Appare</colorChannel>
+                        <colorOverrideOne>(255,255,255)</colorOverrideOne>
+                        <colorOverrideTwo>(255,255,255)</colorOverrideTwo>
+                        <shaderType>Cutout</shaderType>
+                        <inFrontOfBody>true</inFrontOfBody>
+                        <layerInvert>false</layerInvert>
+                        <flipWest>true</flipWest>
+                        <angle>0</angle>
+                        <drawSize>0.8</drawSize>
+                        <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+                        <defaultOffset>Center</defaultOffset>
+                        <alignWithHead>true</alignWithHead>
+                        <offsets>
+                            <south>
+                                <layerOffset>0.14</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </south>
+                            <north>
+                                <layerOffset>0.14</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </north>
+                            <east>
+                                <layerOffset>0.14</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </east>
+                            <west>
+                                <layerOffset>0.14</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </west>
+                        </offsets>
+                    </li>
+                    <li>
+                        <name>Phoenix_GenericTier3HelmetGlow</name>
+                        <userCustomizable>false</userCustomizable>
+                        <path>Things/Pawn/Apparel/Phoenix_Apparel_GenericTier3Helmet/Phoenix_Apparel_GenericTier3Helmet_Glow</path>
+                        <colorChannel>Appare</colorChannel>
+                        <colorOverrideOne>(255,255,255)</colorOverrideOne>
+                        <colorOverrideTwo>(255,255,255)</colorOverrideTwo>
+                        <shaderType>MoteGlow</shaderType>
+                        <inFrontOfBody>true</inFrontOfBody>
+                        <layerInvert>false</layerInvert>
+                        <flipWest>true</flipWest>
+                        <angle>0</angle>
+                        <drawSize>0.8</drawSize>
+                        <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+                        <defaultOffset>Center</defaultOffset>
+                        <alignWithHead>true</alignWithHead>
+                        <offsets>
+                            <south>
+                                <layerOffset>0.15</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </south>
+                            <north>
+                                <layerOffset>0.15</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </north>
+                            <east>
+                                <layerOffset>0.15</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </east>
+                            <west>
+                                <layerOffset>0.15</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </west>
+                        </offsets>
+                    </li>
+                </bodyAddonDefs>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

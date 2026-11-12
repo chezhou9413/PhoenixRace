@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "shaderName": "Custom/RimWorldRealGlow_Particle",
+  "profile": "world",
+  "uiMasks": false,
+  "colorSpace": "Gamma",
+  "grabTexture": null,
+  "geometry": null,
+  "vertexEntry": "vert",
+  "fragmentEntry": "frag",
+  "vertexFile": "shader.vert.glsl",
+  "fragmentFile": "shader.frag.glsl",
+  "arrays": {},
+  "properties": [
+    {
+      "name": "_MainTex",
+      "displayName": "Texture",
+      "type": "2D",
+      "attributes": [],
+      "defaultValue": null,
+      "defaultTexture": "white",
+      "range": null
+    },
+    {
+      "name": "_Color",
+      "displayName": "Main Color",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_GlowMultiplier",
+      "displayName": "Brightness Multiplier",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        2
+      ],
+      "defaultTexture": null,
+      "range": [
+        1,
+        10
+      ]
+    }
+  ],
+  "tags": {
+    "Queue": "Overlay",
+    "IgnoreProjector": "True",
+    "RenderType": "Transparent",
+    "PreviewType": "Plane"
+  },
+  "states": {
+    "LOD": "100",
+    "ZWrite": "Off",
+    "Blend": "SrcAlpha One",
+    "Cull": "Off"
+  },
+  "keywords": [],
+  "keywordGroups": [
+    [
+      "SOFTPARTICLES_ON"
+    ]
+  ],
+  "approximations": []
+}

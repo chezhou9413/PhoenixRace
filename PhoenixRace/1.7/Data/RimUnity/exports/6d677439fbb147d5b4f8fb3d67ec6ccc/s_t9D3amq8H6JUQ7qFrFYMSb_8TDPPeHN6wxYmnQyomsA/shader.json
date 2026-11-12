@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "shaderName": "PhoenixRace/HologramPlanet",
+  "profile": "world",
+  "uiMasks": false,
+  "colorSpace": "Linear",
+  "grabTexture": null,
+  "geometry": null,
+  "vertexEntry": "vert",
+  "fragmentEntry": "frag",
+  "vertexFile": "shader.vert.glsl",
+  "fragmentFile": "shader.frag.glsl",
+  "arrays": {},
+  "properties": [
+    {
+      "name": "_Color",
+      "displayName": "表面颜色",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        0.03,
+        0.3,
+        0.4,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_RimColor",
+      "displayName": "轮廓颜色",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        0.1,
+        0.9,
+        1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_Grid",
+      "displayName": "经纬网强度",
+      "type": "Float",
+      "attributes": [],
+      "defaultValue": [
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    }
+  ],
+  "tags": {
+    "RenderType": "Opaque",
+    "Queue": "Geometry"
+  },
+  "states": {
+    "Cull": "Back",
+    "ZWrite": "On"
+  },
+  "keywords": [],
+  "keywordGroups": [],
+  "approximations": [
+    "程序按 Linear 计算后编码到宿主 UNorm 场景；透明叠加沿用宿主的 Gamma 混合，HDR 超出场景格式范围的部分仍会截断。",
+    "常量正整数幂 2～64 使用乘法展开；负底数按整数幂计算，属于旧 Shader 写法的兼容处理，并非 HLSL pow 的负底数语义保证。"
+  ]
+}

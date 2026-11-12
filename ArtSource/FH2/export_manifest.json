@@ -1,0 +1,616 @@
+{
+  "source": "D:\\QQ\\fh2(1).psd",
+  "source_pixel_scale": 0.25,
+  "directions": {
+    "south": {
+      "head_origin_source_px": [
+        759,
+        366
+      ],
+      "hair_origin_source_px": [
+        -265,
+        -658
+      ],
+      "body_origin_source_px": [
+        -271,
+        -6
+      ],
+      "head_center_on_body_texture_px": [
+        513.5,
+        349.0
+      ],
+      "head_relative_draw_size": 0.5,
+      "hair_relative_draw_size": 1.0,
+      "body_relative_draw_size": 1.0,
+      "draw_order_back_to_front": [
+        "hairback",
+        "tail",
+        "body",
+        "ear",
+        "head",
+        "hair",
+        "face"
+      ]
+    },
+    "east": {
+      "head_origin_source_px": [
+        4831,
+        420
+      ],
+      "hair_origin_source_px": [
+        3807,
+        -604
+      ],
+      "body_origin_source_px": [
+        3276,
+        -11
+      ],
+      "head_center_on_body_texture_px": [
+        644.75,
+        363.75
+      ],
+      "head_relative_draw_size": 0.5,
+      "hair_relative_draw_size": 1.0,
+      "body_relative_draw_size": 1.0,
+      "draw_order_back_to_front": [
+        "hairback",
+        "body",
+        "head",
+        "face",
+        "hair",
+        "tail",
+        "ear"
+      ]
+    },
+    "west": {
+      "head_origin_source_px": [
+        2098,
+        420
+      ],
+      "hair_origin_source_px": [
+        1074,
+        -604
+      ],
+      "body_origin_source_px": [
+        1603,
+        -11
+      ],
+      "head_center_on_body_texture_px": [
+        379.75,
+        363.75
+      ],
+      "head_relative_draw_size": 0.5,
+      "hair_relative_draw_size": 1.0,
+      "body_relative_draw_size": 1.0,
+      "draw_order_back_to_front": [
+        "hairback",
+        "ear",
+        "body",
+        "head",
+        "face",
+        "hair",
+        "tail"
+      ]
+    },
+    "north": {
+      "head_origin_source_px": [
+        6799,
+        366
+      ],
+      "hair_origin_source_px": [
+        5775,
+        -658
+      ],
+      "body_origin_source_px": [
+        5768,
+        -11
+      ],
+      "head_center_on_body_texture_px": [
+        513.75,
+        350.25
+      ],
+      "head_relative_draw_size": 0.5,
+      "hair_relative_draw_size": 1.0,
+      "body_relative_draw_size": 1.0,
+      "draw_order_back_to_front": [
+        "ear",
+        "head",
+        "body",
+        "tail",
+        "hairback",
+        "hair",
+        "face"
+      ]
+    }
+  },
+  "files": [
+    {
+      "path": "Textures/AlienRace/FH2/head/Head_south.png",
+      "size": [
+        512,
+        512
+      ],
+      "sources": [
+        "head_south"
+      ],
+      "coordinate_frame": "head",
+      "alpha_bbox": [
+        170,
+        154,
+        342,
+        358
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/face/Face_south.png",
+      "size": [
+        512,
+        512
+      ],
+      "sources": [
+        "face_south"
+      ],
+      "coordinate_frame": "head",
+      "alpha_bbox": [
+        175,
+        250,
+        335,
+        332
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/body/Naked_Female_south.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "5/2"
+      ],
+      "coordinate_frame": "body",
+      "alpha_bbox": [
+        426,
+        434,
+        599,
+        899
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/hair/HairFrontA_south.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "5/6"
+      ],
+      "coordinate_frame": "hair",
+      "alpha_bbox": [
+        372,
+        316,
+        661,
+        600
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/hairback/HairBackA_south.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "5/0"
+      ],
+      "coordinate_frame": "hair",
+      "alpha_bbox": [
+        297,
+        365,
+        726,
+        1013
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/ear/EarFeathersA_south.png",
+      "size": [
+        512,
+        512
+      ],
+      "sources": [
+        "5/4"
+      ],
+      "coordinate_frame": "head",
+      "alpha_bbox": [
+        83,
+        263,
+        427,
+        353
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/tail/TailFeathers_south.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "5/1"
+      ],
+      "coordinate_frame": "body",
+      "alpha_bbox": [
+        451,
+        523,
+        792,
+        911
+      ]
+    },
+    {
+      "path": "Extras/Apparel/FH2_Armor_south.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "5/3"
+      ],
+      "coordinate_frame": "body",
+      "alpha_bbox": [
+        427,
+        439,
+        600,
+        899
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/head/Head_east.png",
+      "size": [
+        512,
+        512
+      ],
+      "sources": [
+        "head_east"
+      ],
+      "coordinate_frame": "head",
+      "alpha_bbox": [
+        173,
+        154,
+        339,
+        358
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/face/Face_east.png",
+      "size": [
+        512,
+        512
+      ],
+      "sources": [
+        "face_east"
+      ],
+      "coordinate_frame": "head",
+      "alpha_bbox": [
+        254,
+        252,
+        315,
+        332
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/body/Naked_Female_east.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "9/0/1"
+      ],
+      "coordinate_frame": "body",
+      "alpha_bbox": [
+        467,
+        416,
+        678,
+        899
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/hair/HairFrontA_east.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "9/0/3"
+      ],
+      "coordinate_frame": "hair",
+      "alpha_bbox": [
+        351,
+        312,
+        619,
+        669
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/hairback/HairBackA_east.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "9/0/0"
+      ],
+      "coordinate_frame": "hair",
+      "alpha_bbox": [
+        205,
+        372,
+        601,
+        1015
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/ear/EarFeathersA_east.png",
+      "size": [
+        512,
+        512
+      ],
+      "sources": [
+        "9/2"
+      ],
+      "coordinate_frame": "head",
+      "alpha_bbox": [
+        146,
+        270,
+        229,
+        349
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/tail/TailFeathers_east.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "9/1"
+      ],
+      "coordinate_frame": "body",
+      "alpha_bbox": [
+        318,
+        583,
+        554,
+        881
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/head/Head_west.png",
+      "size": [
+        512,
+        512
+      ],
+      "sources": [
+        "head_west"
+      ],
+      "coordinate_frame": "head",
+      "alpha_bbox": [
+        173,
+        154,
+        339,
+        358
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/face/Face_west.png",
+      "size": [
+        512,
+        512
+      ],
+      "sources": [
+        "face_west"
+      ],
+      "coordinate_frame": "head",
+      "alpha_bbox": [
+        196,
+        252,
+        258,
+        332
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/body/Naked_Female_west.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "8/2"
+      ],
+      "coordinate_frame": "body",
+      "alpha_bbox": [
+        346,
+        416,
+        557,
+        899
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/hair/HairFrontA_west.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "8/4"
+      ],
+      "coordinate_frame": "hair",
+      "alpha_bbox": [
+        407,
+        315,
+        662,
+        569
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/hairback/HairBackA_west.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "8/0"
+      ],
+      "coordinate_frame": "hair",
+      "alpha_bbox": [
+        425,
+        372,
+        818,
+        1015
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/ear/EarFeathersA_west.png",
+      "size": [
+        512,
+        512
+      ],
+      "sources": [
+        "8/1"
+      ],
+      "coordinate_frame": "head",
+      "alpha_bbox": [
+        283,
+        272,
+        365,
+        351
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/tail/TailFeathers_west.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "8/5"
+      ],
+      "coordinate_frame": "body",
+      "alpha_bbox": [
+        470,
+        583,
+        706,
+        881
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/head/Head_north.png",
+      "size": [
+        512,
+        512
+      ],
+      "sources": [
+        "head_north"
+      ],
+      "coordinate_frame": "head",
+      "alpha_bbox": [
+        170,
+        154,
+        342,
+        358
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/face/Face_north.png",
+      "size": [
+        512,
+        512
+      ],
+      "sources": [
+        "face_north"
+      ],
+      "coordinate_frame": "head",
+      "alpha_bbox": null
+    },
+    {
+      "path": "Textures/AlienRace/FH2/body/Naked_Female_north.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "6/2"
+      ],
+      "coordinate_frame": "body",
+      "alpha_bbox": [
+        426,
+        424,
+        599,
+        900
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/hair/HairFrontA_north.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "hair_north"
+      ],
+      "coordinate_frame": "hair",
+      "alpha_bbox": null
+    },
+    {
+      "path": "Textures/AlienRace/FH2/hairback/HairBackA_north.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "6/4"
+      ],
+      "coordinate_frame": "hair",
+      "alpha_bbox": [
+        295,
+        315,
+        725,
+        1011
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/ear/EarFeathersA_north.png",
+      "size": [
+        512,
+        512
+      ],
+      "sources": [
+        "6/0"
+      ],
+      "coordinate_frame": "head",
+      "alpha_bbox": [
+        82,
+        262,
+        426,
+        352
+      ]
+    },
+    {
+      "path": "Textures/AlienRace/FH2/tail/TailFeathers_north.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sources": [
+        "6/3"
+      ],
+      "coordinate_frame": "body",
+      "alpha_bbox": [
+        232,
+        566,
+        558,
+        910
+      ]
+    }
+  ],
+  "references": [
+    "AgRace/AgRace/Textures/AlienRace/Ag"
+  ],
+  "face_layout": "眼睛、眉毛、嘴巴合成为完整 Face，与基础 Head 分开；不提供 FA 细分部件。",
+  "hair_shadow": "不导出或叠加独立刘海投影；基础头保留脸颊、鼻部和耳朵细节。"
+}

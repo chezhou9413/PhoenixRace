@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Projectile_DisruptionMatrix</defName>
+    <label>干扰矩阵弹</label>
+    <thingClass>PhoxProjectile.Projectile_DisruptionMatrix</thingClass>
+    
+    <graphicData>
+      <texPath>Projectile/DisruptionMatrix</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    
+    <projectile>
+      <damageDef>EMP</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <speed>25</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- ========== 干扰矩阵技能 AbilityDef ========== -->
+  <AbilityDef>
+    <defName>Ability_DisruptionMatrix</defName>
+    <label>干扰矩阵</label>
+    <description>发射追踪型电磁干扰弹，命中目标后施加干扰矩阵效果，降低目标的移动和操作能力。</description>
+    <iconPath>Ability/DisruptionMatrix</iconPath> <!-- 需要准备图标 -->
+    <cooldownTicksRange>600</cooldownTicksRange> <!-- 冷却时间：10秒 -->
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <targetRequired>true</targetRequired>
+    
+    <verbProperties>
+      <verbClass>PhoenixRaceLib.PhoxVerb.Verb_LaunchDisruptionMatrix</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <warmupTime>0.5</warmupTime>
+      <range>30</range>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetMechs>true</canTargetMechs>
+      </targetParams>
+      <defaultProjectile>Projectile_DisruptionMatrix</defaultProjectile>
+      <muzzleFlashScale>9</muzzleFlashScale>
+      <soundCast>Shot_ChargeBlaster</soundCast> <!-- 可以替换为自定义音效 -->
+    </verbProperties>
+  </AbilityDef>
+</Defs>

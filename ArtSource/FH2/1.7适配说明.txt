@@ -1,0 +1,29 @@
+PhoenixRace 1.7 / FH2
+
+维护目录：E:\RimModDev\PhoenixRace
+可加载模组：E:\RimModDev\PhoenixRace\PhoenixRace
+唯一游戏源码：PhoenixRace\1.7\Source\PhoenixRaceLib
+编译入口：compile_modSelf.bat（.NET 10，Release）
+
+人物贴图
+使用 fh2(1).psd 拆出的这一套四方向贴图。保留身体、头部底图、整体面部、前发、后发、耳羽和尾羽；不加载旧人物、旧飞行动画贴图或 Facial Animation 拆分部件。头发投影层已去除，皮肤本身的鼻部、脸颊和耳部颜色保留。
+游戏贴图位于 PhoenixRace\1.7\Textures\AlienRace\Phoenix。Null 中的透明图用于隐藏原版头发和头部节点，实际头部由附加层显示。
+
+像素与尺寸
+拆图保持原稿统一的四分之一像素比例；512 画布的头、脸、耳羽使用 drawSize 0.5，1024 画布的身体、前后发、尾羽使用 1.0。各方向头部中心详见 export_manifest.json，由 PhoenixHeadWorker 将共同像素坐标转换为 HAR 身体尺寸下的偏移，不按每张图的可见边界分别拉伸。
+成年 HAR 身体、头部、肖像倍率统一为 1.27。婴儿 0.83、幼年 0.885、青少年 0.995，保留原有年龄之间的相对大小。基础 bodyWidth 1.5、headSizeFactor 1。
+Root 与渡鸦一致，offset = (0, 0, 0.05)。四方向使用各自的前后顺序，BodyAddon 的深度控制在身体附近，避免旧的大深度偏移导致穿插。
+身体使用原版 PawnRenderNode_Body。原版 GraphicMeshSet 的 west 网格默认翻转，因此仅游戏目录中的 body\Naked_Female_west.png 相对原始拆图水平镜像一次，运行时翻转后回到原稿方向。镜像以整个 1024 画布为轴，不裁切或改变透明留白。原始拆图保留原样，HAR 附件不镜像，枯骨继续沿用原版规则。重新复制拆图到游戏资源时也须对该身体贴图执行同样的水平镜像。
+
+离线预览
+Tools\Render-Offline.py 读取实际 XML、拆图坐标及渡鸦本地参考资源，输出到 E:\ModdevMics\Outputs\PhoenixRace-1.7\Offline。
+比较条件：成年女性、站立、正面、默认渡鸦发型、无装备、无 FA，含头发，排除耳羽、翼和尾羽的外扩轮廓。alpha >= 128 测得渡鸦主体高 1.353952 格、凤凰高 1.376660 格，凤凰约高 1.68%；脚底位置相差 0.004063 格。
+对照图保持同一地图原点和相同每格像素数，不按人物包围盒重新居中。离线平面合成用于检查尺寸、锚点和遮挡，不包含游戏光照、动作、服装适配和运行时特效。
+
+RimUnity
+Tools\Export-RimUnity.ps1 使用两个已有 Unity 资源工程导出同一份 1.7\Data\RimUnity\catalog.json；逻辑 prefab 路径带 Assets/，与 ChezhouLib 挂载规则一致。
+护盾、轰炸、飞机、舷窗 Canvas 与全息场景通过 RimUnity 实例化。护盾和自定义显示 Shader 使用导出的原生资源，不再依赖旧 Unity AssetBundle。
+静态全息线段转换为窄三角带；Loop LineRenderer 使用闭合末点，贴图模式统一为 Stretch。飞机未使用烘焙光照的移动端无光照材质转换为 Unlit/Texture。原资源工程中的原始 prefab 在导出后恢复。
+
+旧版本备份
+1.6、旧人物贴图与替换前的安装目录位于 E:\ModdevMics\Backups\PhoenixRace\20261023-before-1.7。当前开发和加载目录只保留 1.7，不维护双版本源码。

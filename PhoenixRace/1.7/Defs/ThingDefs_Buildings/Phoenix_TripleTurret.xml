@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Phoenix_TripleTurret</defName>
+    <label>凤凰三联装炮塔</label>
+    <description>凤凰制式三联装自动炮塔。通电后自动追踪敌人，依次使用三门火炮射击，也可手动指定目标或停火。</description>
+    <thingClass>PhoenixRaceLib.Buildings.Turrets.Building_PhoenixTurret</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+    <graphicData>
+      <texPath>Things/Building/Security/PhoenixTripleTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3.6,3.6)</drawSize>
+    </graphicData>
+    <uiIconPath>Things/Building/Security/PhoenixTripleTurret</uiIconPath>
+    <uiIconScale>1</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <stealable>false</stealable>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <tickerType>Normal</tickerType>
+    <notifyMapRemoved>true</notifyMapRemoved>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <costList>
+      <Steel>250</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <WorkToBuild>4500</WorkToBuild>
+      <Mass>80</Mass>
+      <Beauty>-10</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>350</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="PhoenixRaceLib.Buildings.Turrets.CompProperties_PhoenixTurretModel">
+        <prefabKey>Phoenix_TripleTurret</prefabKey>
+        <yawPath>root/turret_yaw</yawPath>
+        <rotationSpeed>180</rotationSpeed>
+        <barrelPaths>
+          <li>root/turret_yaw/barrel_0</li>
+          <li>root/turret_yaw/barrel_1</li>
+          <li>root/turret_yaw/barrel_2</li>
+        </barrelPaths>
+        <muzzlePaths>
+          <li>root/turret_yaw/barrel_0/Muzzle</li>
+          <li>root/turret_yaw/barrel_1/Muzzle</li>
+          <li>root/turret_yaw/barrel_2/Muzzle</li>
+        </muzzlePaths>
+      </li>
+    </comps>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <combatPower>180</combatPower>
+      <turretGunDef>Phoenix_TripleTurretGun</turretGunDef>
+      <turretBurstWarmupTime>1.2</turretBurstWarmupTime>
+      <turretBurstCooldownTime>4</turretBurstCooldownTime>
+    </building>
+    <placeWorkers><li>PlaceWorker_ShowTurretRadius</li></placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Phoenix_TripleTurretGun</defName>
+    <label>凤凰三联装火炮</label>
+    <description>安装在凤凰自动炮塔上的三联装火炮。</description>
+    <graphicData>
+      <texPath>Things/Building/Security/PhoenixTripleTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.72</AccuracyMedium>
+      <AccuracyLong>0.55</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>35</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Phoenix_TripleTurretShell</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <minRange>3</minRange>
+        <range>34.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>Phoenix_TurretFire</soundCast>
+        <soundCastTail>Phoenix_TurretTail</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Phoenix_TripleTurretShell</defName>
+    <label>凤凰炮塔炮弹</label>
+    <thingClass>PhoenixRaceLib.Buildings.Turrets.Projectile_PhoenixTurretShell</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <armorPenetrationBase>0.3</armorPenetrationBase>
+      <speed>90</speed>
+      <arcHeightFactor>0.8</arcHeightFactor>
+    </projectile>
+  </ThingDef>
+</Defs>

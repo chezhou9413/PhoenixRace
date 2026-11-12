@@ -1,0 +1,526 @@
+{
+  "version": 1,
+  "shaderName": "Custom/HexShieldShatter_WorldFlow",
+  "profile": "world",
+  "uiMasks": false,
+  "colorSpace": "Gamma",
+  "grabTexture": null,
+  "geometry": null,
+  "vertexEntry": "vert",
+  "fragmentEntry": "frag",
+  "vertexFile": "shader.vert.glsl",
+  "fragmentFile": "shader.frag.glsl",
+  "arrays": {},
+  "properties": [
+    {
+      "name": "_HexScale",
+      "displayName": "Hexagon Scale",
+      "type": "Range",
+      "attributes": [
+        "Header ( Grid Settings )"
+      ],
+      "defaultValue": [
+        30
+      ],
+      "defaultTexture": null,
+      "range": [
+        1,
+        100
+      ]
+    },
+    {
+      "name": "_LineThickness",
+      "displayName": "Line Thickness",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.05
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.01,
+        0.2
+      ]
+    },
+    {
+      "name": "_HexIntensity",
+      "displayName": "Hexagon Intensity",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        5
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        10
+      ]
+    },
+    {
+      "name": "_Color",
+      "displayName": "Shield Color",
+      "type": "Color",
+      "attributes": [
+        "Header ( Visuals )"
+      ],
+      "defaultValue": [
+        1,
+        0.5,
+        0,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_BaseFresnelPower",
+      "displayName": "Fresnel Power",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        4
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.1,
+        10
+      ]
+    },
+    {
+      "name": "_BaseFresnelIntensity",
+      "displayName": "Base Intensity",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.5
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.1,
+        2
+      ]
+    },
+    {
+      "name": "_NoiseTex",
+      "displayName": "Energy Noise (Seamless)",
+      "type": "2D",
+      "attributes": [
+        "Header ( Energy Noise Flow )"
+      ],
+      "defaultValue": null,
+      "defaultTexture": "white",
+      "range": null
+    },
+    {
+      "name": "_NoiseScale",
+      "displayName": "Noise Tiling",
+      "type": "Float",
+      "attributes": [],
+      "defaultValue": [
+        0.5
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_NoiseFlowSpeed",
+      "displayName": "Flow Speed (XY)",
+      "type": "Vector",
+      "attributes": [],
+      "defaultValue": [
+        0.3,
+        0.2,
+        0,
+        0
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_NoiseIntensity",
+      "displayName": "Energy Intensity",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        1.2
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        5
+      ]
+    },
+    {
+      "name": "_SpreadSpeed",
+      "displayName": "Spread Speed",
+      "type": "Float",
+      "attributes": [
+        "Header ( Animation )"
+      ],
+      "defaultValue": [
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_SpreadWidth",
+      "displayName": "Spread Width",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.2
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.01,
+        1
+      ]
+    },
+    {
+      "name": "_Dissolve",
+      "displayName": "Dissolve Progress",
+      "type": "Range",
+      "attributes": [
+        "Header ( Dissolve Effects )"
+      ],
+      "defaultValue": [
+        0
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        1.2
+      ]
+    },
+    {
+      "name": "_ShatterGlow",
+      "displayName": "Shatter Glow Intensity",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        10
+      ],
+      "defaultTexture": null,
+      "range": [
+        1,
+        20
+      ]
+    },
+    {
+      "name": "_DissolveSoftness",
+      "displayName": "Dissolve Softness",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.1
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.01,
+        0.5
+      ]
+    },
+    {
+      "name": "_BreakTint",
+      "displayName": "Break Tint",
+      "type": "Color",
+      "attributes": [
+        "Header ( Break Effect )"
+      ],
+      "defaultValue": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_ImpactColor",
+      "displayName": "Impact Wave Color",
+      "type": "Color",
+      "attributes": [
+        "Header ( Impact Wave )"
+      ],
+      "defaultValue": [
+        1,
+        0.8,
+        0.3,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_ImpactSpeed",
+      "displayName": "Impact Spread Speed",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        2
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.1,
+        5
+      ]
+    },
+    {
+      "name": "_ImpactMaxRadius",
+      "displayName": "Impact Max Radius",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        1.8
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.1,
+        3
+      ]
+    },
+    {
+      "name": "_ImpactRingWidth",
+      "displayName": "Impact Ring Width",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.35
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.01,
+        0.8
+      ]
+    },
+    {
+      "name": "_ImpactIntensity",
+      "displayName": "Impact Intensity",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        15
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        30
+      ]
+    },
+    {
+      "name": "_ImpactFadePower",
+      "displayName": "Impact Fade Power",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        1.5
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.5,
+        5
+      ]
+    },
+    {
+      "name": "_ImpactHexShape",
+      "displayName": "Use Hexagon Wave",
+      "type": "Float",
+      "attributes": [
+        "Toggle"
+      ],
+      "defaultValue": [
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_ImpactRedColor",
+      "displayName": "Red Tint Color",
+      "type": "Color",
+      "attributes": [
+        "Header ( Impact Red Tint )"
+      ],
+      "defaultValue": [
+        1.5,
+        0.1,
+        0.1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_ImpactRedRadius",
+      "displayName": "Red Tint Radius",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.35
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.05,
+        1
+      ]
+    },
+    {
+      "name": "_ImpactRedDuration",
+      "displayName": "Red Tint Duration (sec)",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        1.2
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.1,
+        5
+      ]
+    },
+    {
+      "name": "_ImpactRedIntensity",
+      "displayName": "Red Tint Intensity",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        1.5
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        5
+      ]
+    },
+    {
+      "name": "_ImpactPoint0",
+      "displayName": "Impact Point 0",
+      "type": "Vector",
+      "attributes": [],
+      "defaultValue": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_ImpactPoint1",
+      "displayName": "Impact Point 1",
+      "type": "Vector",
+      "attributes": [],
+      "defaultValue": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_ImpactPoint2",
+      "displayName": "Impact Point 2",
+      "type": "Vector",
+      "attributes": [],
+      "defaultValue": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_ImpactPoint3",
+      "displayName": "Impact Point 3",
+      "type": "Vector",
+      "attributes": [],
+      "defaultValue": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_ImpactPoint4",
+      "displayName": "Impact Point 4",
+      "type": "Vector",
+      "attributes": [],
+      "defaultValue": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_ImpactPoint5",
+      "displayName": "Impact Point 5",
+      "type": "Vector",
+      "attributes": [],
+      "defaultValue": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_ImpactPoint6",
+      "displayName": "Impact Point 6",
+      "type": "Vector",
+      "attributes": [],
+      "defaultValue": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_ImpactPoint7",
+      "displayName": "Impact Point 7",
+      "type": "Vector",
+      "attributes": [],
+      "defaultValue": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "defaultTexture": null,
+      "range": null
+    }
+  ],
+  "tags": {
+    "Queue": "Transparent",
+    "RenderType": "Transparent",
+    "IgnoreProjector": "True"
+  },
+  "states": {
+    "LOD": "100",
+    "ZWrite": "Off",
+    "Blend": "SrcAlpha One",
+    "Cull": "Back"
+  },
+  "keywords": [],
+  "keywordGroups": [],
+  "approximations": [
+    "smoothstep 按 HLSL 饱和 Hermite 公式展开，支持反向边界；相等边界仍要求作者避免除零。"
+  ]
+}

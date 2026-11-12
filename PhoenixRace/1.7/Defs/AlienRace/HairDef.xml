@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <StyleItemCategoryDef>
+        <defName>Phoenix_Category</defName>
+        <label>凤凰发型</label>
+    </StyleItemCategoryDef>
+    <HairDef>
+        <defName>Phoenix_null</defName>
+        <label>空白占位发型</label>
+        <hairGender>Any</hairGender>
+        <texPath>AlienRace/Phoenix/Null/Null</texPath>
+        <category>Misc</category>
+        <styleTags>
+            <li>Phoenix_Category</li>
+        </styleTags>
+    </HairDef>
+</Defs> 

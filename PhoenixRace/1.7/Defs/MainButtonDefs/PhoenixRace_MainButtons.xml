@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <MainButtonDef>
+        <defName>PhoenixRace_ShipViewport</defName>
+        <label>舰船</label>
+        <description>打开或关闭舰船舷窗，查看当前星球与全息星图。</description>
+        <workerClass>PhoenixRaceLib.SpaceViewport.MainButtonWorker_PhoenixShip</workerClass>
+        <order>85</order>
+        <validWithoutMap>true</validWithoutMap>
+        <closesWorldView>false</closesWorldView>
+    </MainButtonDef>
+</Defs>

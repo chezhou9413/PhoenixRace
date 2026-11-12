@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "shaderName": "PhoenixRace/OrbitPresentation",
+  "profile": "ui",
+  "uiMasks": true,
+  "colorSpace": "Linear",
+  "grabTexture": null,
+  "geometry": null,
+  "vertexEntry": "vert",
+  "fragmentEntry": "frag",
+  "vertexFile": "shader.vert.glsl",
+  "fragmentFile": "shader.frag.glsl",
+  "arrays": {},
+  "properties": [
+    {
+      "name": "_MainTex",
+      "displayName": "星球画面",
+      "type": "2D",
+      "attributes": [
+        "PerRendererData"
+      ],
+      "defaultValue": null,
+      "defaultTexture": "black",
+      "range": null
+    },
+    {
+      "name": "_Exposure",
+      "displayName": "曝光倍率",
+      "type": "Float",
+      "attributes": [],
+      "defaultValue": [
+        1.3
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_Midtone",
+      "displayName": "中间调指数",
+      "type": "Float",
+      "attributes": [],
+      "defaultValue": [
+        0.82
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_AtmosphereColor",
+      "displayName": "大气散射颜色",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        0.24,
+        0.58,
+        1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_AtmosphereWidth",
+      "displayName": "大气边缘厚度",
+      "type": "Float",
+      "attributes": [],
+      "defaultValue": [
+        0.018
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_AtmosphereStrength",
+      "displayName": "大气辉光强度",
+      "type": "Float",
+      "attributes": [],
+      "defaultValue": [
+        0.38
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_EdgeBlur",
+      "displayName": "边缘模糊像素",
+      "type": "Float",
+      "attributes": [],
+      "defaultValue": [
+        2.4
+      ],
+      "defaultTexture": null,
+      "range": null
+    }
+  ],
+  "tags": {
+    "Queue": "Transparent",
+    "RenderType": "Transparent",
+    "IgnoreProjector": "True"
+  },
+  "states": {
+    "Cull": "Off",
+    "ZWrite": "Off",
+    "ZTest": "[unity_GUIZTestMode]",
+    "Blend": "SrcAlpha OneMinusSrcAlpha"
+  },
+  "keywords": [],
+  "keywordGroups": [
+    [
+      "UNITY_UI_CLIP_RECT"
+    ]
+  ],
+  "approximations": [
+    "程序按 Linear 计算后编码到宿主 UNorm 场景；透明叠加沿用宿主的 Gamma 混合，HDR 超出场景格式范围的部分仍会截断。"
+  ]
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ShaderDef>
+    <defName>Phoenix_ModelGeometry</defName>
+    <shaderProgram>
+      <vertexShaderFileName>PhoenixModel/Geometry.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>PhoenixModel/Geometry.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>false</transparent>
+      <depthTest>true</depthTest>
+      <depthWrite>true</depthWrite>
+      <cullMode>Back</cullMode>
+      <blendMode>Opaque</blendMode>
+    </shaderProgram>
+  </ShaderDef>
+  <ShaderDef>
+    <defName>Phoenix_ModelComposite</defName>
+    <shaderProgram>
+      <vertexShaderFileName>PhoenixModel/Composite.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>PhoenixModel/Composite.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>false</transparent>
+      <depthTest>false</depthTest>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <blendMode>Opaque</blendMode>
+    </shaderProgram>
+  </ShaderDef>
+  <ShaderDef>
+    <defName>Phoenix_ModelDisplay</defName>
+    <shaderProgram>
+      <vertexShaderFileName>PhoenixModel/Display.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>PhoenixModel/Display.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthTest>true</depthTest>
+      <depthWrite>true</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>2450</renderQueue>
+      <blendMode>Custom</blendMode>
+      <blendSrcFactor>One</blendSrcFactor>
+      <blendDstFactor>OneMinusSrcAlpha</blendDstFactor>
+    </shaderProgram>
+  </ShaderDef>
+</Defs>

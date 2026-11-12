@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ChezhouLib.LibDef.ClModule Name="PhoenixModuleBase" ParentName="ResourceBase" Abstract="True">
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>1</Mass>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ChezhouLib.LibDef.ClModule>
+</Defs>

@@ -2,8 +2,12 @@
 !/.gitignore
 !/PhoenixRace
 !/README.md
+!/ArtSource
+!/Tools
+!/compile_modSelf.bat
+!/deploy_modSelf.bat
 
 # VS缓存和编译产物
-PhoenixRace/1.6/Source/PhoenixRaceLib/.vs/
-PhoenixRace/1.6/Source/PhoenixRaceLib/obj/
-PhoenixRace/1.6/Source/PhoenixRaceLib/bin/
+PhoenixRace/1.7/Source/PhoenixRaceLib/.vs/
+PhoenixRace/1.7/Source/PhoenixRaceLib/obj/
+PhoenixRace/1.7/Source/PhoenixRaceLib/bin/

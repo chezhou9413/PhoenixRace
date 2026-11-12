@@ -1,0 +1,676 @@
+{
+  "canvasWidth": 9000,
+  "canvasHeight": 5000,
+  "coordinateSystem": "PSD左上角为原点，x向右，y向下；UGUI左上锚点，anchoredPosition=(x,-y)",
+  "nodes": [
+    {
+      "name": "Background_Structure",
+      "parent": "Environment",
+      "sprite": "Textures/Environment/Background_Structure.png",
+      "sourceLayer": "窗外 + 钢架 + 图层23（不含白色背景）",
+      "active": true,
+      "x": 0,
+      "y": 0,
+      "width": 9000,
+      "height": 5000,
+      "textureWidth": 4096,
+      "textureHeight": 2276,
+      "anchoredPosition": [
+        0,
+        0
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 0,
+      "uguiPosition": [
+        0.0,
+        0.0
+      ],
+      "uguiSize": [
+        1920.0000000000002,
+        1066.6666666666667
+      ],
+      "originalResolutionFile": "OriginalResolution/Environment/Background_Structure.png",
+      "transparency": "保留窗外源透明度，排除PSD底层白色背景"
+    },
+    {
+      "name": "Background_Structure_Red",
+      "parent": "Environment",
+      "sprite": "Textures/Environment/Background_Structure_Red.png",
+      "sourceLayer": "窗外 + 红钢架 + 图层23（不含白色背景）",
+      "active": false,
+      "x": 0,
+      "y": 0,
+      "width": 9000,
+      "height": 5000,
+      "textureWidth": 4096,
+      "textureHeight": 2276,
+      "anchoredPosition": [
+        0,
+        0
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 1,
+      "replaces": "Background_Structure",
+      "uguiPosition": [
+        0.0,
+        0.0
+      ],
+      "uguiSize": [
+        1920.0000000000002,
+        1066.6666666666667
+      ],
+      "originalResolutionFile": "OriginalResolution/Environment/Background_Structure_Red.png",
+      "transparency": "保留窗外源透明度，排除PSD底层白色背景"
+    },
+    {
+      "name": "Interior_WindowAndHull",
+      "parent": "Environment",
+      "sprite": "Textures/Environment/Interior_WindowAndHull.png",
+      "sourceLayer": "舷窗",
+      "active": true,
+      "x": 0,
+      "y": 0,
+      "width": 9000,
+      "height": 5000,
+      "textureWidth": 4096,
+      "textureHeight": 2276,
+      "anchoredPosition": [
+        0,
+        0
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 2,
+      "uguiPosition": [
+        0.0,
+        0.0
+      ],
+      "uguiSize": [
+        1920.0000000000002,
+        1066.6666666666667
+      ],
+      "originalResolutionFile": "OriginalResolution/Environment/Interior_WindowAndHull.png"
+    },
+    {
+      "name": "Interior_Red",
+      "parent": "Environment",
+      "sprite": "Textures/Alternatives/Interior_Red.png",
+      "sourceLayer": "红舷窗",
+      "active": false,
+      "x": 0,
+      "y": 0,
+      "width": 9000,
+      "height": 5000,
+      "textureWidth": 4096,
+      "textureHeight": 2276,
+      "anchoredPosition": [
+        0,
+        0
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 3,
+      "replaces": "Interior_WindowAndHull",
+      "uguiPosition": [
+        0.0,
+        0.0
+      ],
+      "uguiSize": [
+        1920.0000000000002,
+        1066.6666666666667
+      ],
+      "originalResolutionFile": "OriginalResolution/Alternatives/Interior_Red.png"
+    },
+    {
+      "name": "Trim_Lines",
+      "parent": "Environment",
+      "sprite": "Textures/Environment/Trim_Lines.png",
+      "sourceLayer": "线条装饰",
+      "active": true,
+      "x": 840,
+      "y": 420,
+      "width": 8160,
+      "height": 2523,
+      "textureWidth": 4096,
+      "textureHeight": 1266,
+      "anchoredPosition": [
+        840,
+        -420
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 4,
+      "uguiPosition": [
+        179.20000000000002,
+        -89.60000000000001
+      ],
+      "uguiSize": [
+        1740.8000000000002,
+        538.24
+      ],
+      "originalResolutionFile": "OriginalResolution/Environment/Trim_Lines.png"
+    },
+    {
+      "name": "Railing_Main",
+      "parent": "Environment",
+      "sprite": "Textures/Environment/Railing_Main.png",
+      "sourceLayer": "栏杆",
+      "active": true,
+      "x": 1108,
+      "y": 1713,
+      "width": 6270,
+      "height": 1669,
+      "textureWidth": 4096,
+      "textureHeight": 1090,
+      "anchoredPosition": [
+        1108,
+        -1713
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 5,
+      "uguiPosition": [
+        236.37333333333333,
+        -365.44
+      ],
+      "uguiSize": [
+        1337.6000000000001,
+        356.05333333333334
+      ],
+      "originalResolutionFile": "OriginalResolution/Environment/Railing_Main.png"
+    },
+    {
+      "name": "Railing_Red",
+      "parent": "Environment",
+      "sprite": "Textures/Alternatives/Railing_Red.png",
+      "sourceLayer": "红栏杆",
+      "active": false,
+      "x": 1108,
+      "y": 1713,
+      "width": 6270,
+      "height": 1669,
+      "textureWidth": 4096,
+      "textureHeight": 1090,
+      "anchoredPosition": [
+        1108,
+        -1713
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 6,
+      "replaces": "Railing_Main",
+      "uguiPosition": [
+        236.37333333333333,
+        -365.44
+      ],
+      "uguiSize": [
+        1337.6000000000001,
+        356.05333333333334
+      ],
+      "originalResolutionFile": "OriginalResolution/Alternatives/Railing_Red.png"
+    },
+    {
+      "name": "Stairs_Main",
+      "parent": "Environment",
+      "sprite": "Textures/Environment/Stairs_Main.png",
+      "sourceLayer": "台阶",
+      "active": true,
+      "x": 0,
+      "y": 2496,
+      "width": 7327,
+      "height": 2504,
+      "textureWidth": 4096,
+      "textureHeight": 1400,
+      "anchoredPosition": [
+        0,
+        -2496
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 7,
+      "uguiPosition": [
+        0.0,
+        -532.48
+      ],
+      "uguiSize": [
+        1563.0933333333335,
+        534.1866666666667
+      ],
+      "originalResolutionFile": "OriginalResolution/Environment/Stairs_Main.png"
+    },
+    {
+      "name": "Floor_Right",
+      "parent": "Environment",
+      "sprite": "Textures/Environment/Floor_Right.png",
+      "sourceLayer": "右边地板",
+      "active": true,
+      "x": 7294,
+      "y": 3189,
+      "width": 1702,
+      "height": 1811,
+      "textureWidth": 1702,
+      "textureHeight": 1811,
+      "anchoredPosition": [
+        7294,
+        -3189
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 8,
+      "uguiPosition": [
+        1556.0533333333335,
+        -680.32
+      ],
+      "uguiSize": [
+        363.09333333333336,
+        386.3466666666667
+      ],
+      "originalResolutionFile": "OriginalResolution/Environment/Floor_Right.png"
+    },
+    {
+      "name": "Pedestal_Red",
+      "parent": "StarPlatform",
+      "sprite": "Textures/StarPlatform/Pedestal_Red.png",
+      "sourceLayer": "红台座",
+      "active": true,
+      "x": 1842,
+      "y": 2697,
+      "width": 5591,
+      "height": 2303,
+      "textureWidth": 4096,
+      "textureHeight": 1687,
+      "anchoredPosition": [
+        1842,
+        -2697
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 9,
+      "uguiPosition": [
+        392.96000000000004,
+        -575.36
+      ],
+      "uguiSize": [
+        1192.7466666666667,
+        491.3066666666667
+      ],
+      "originalResolutionFile": "OriginalResolution/StarPlatform/Pedestal_Red.png"
+    },
+    {
+      "name": "Pedestal_Default",
+      "parent": "StarPlatform",
+      "sprite": "Textures/Alternatives/Pedestal_Default.png",
+      "sourceLayer": "台座",
+      "active": false,
+      "x": 1842,
+      "y": 2697,
+      "width": 5591,
+      "height": 2303,
+      "textureWidth": 4096,
+      "textureHeight": 1687,
+      "anchoredPosition": [
+        1842,
+        -2697
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 10,
+      "replaces": "Pedestal_Red",
+      "uguiPosition": [
+        392.96000000000004,
+        -575.36
+      ],
+      "uguiSize": [
+        1192.7466666666667,
+        491.3066666666667
+      ],
+      "originalResolutionFile": "OriginalResolution/Alternatives/Pedestal_Default.png"
+    },
+    {
+      "name": "Hologram_StarMap",
+      "parent": "StarPlatform",
+      "sprite": "Textures/StarPlatform/Hologram_StarMap.png",
+      "sourceLayer": "星图",
+      "active": true,
+      "x": 3235,
+      "y": 1611,
+      "width": 2968,
+      "height": 1947,
+      "textureWidth": 2968,
+      "textureHeight": 1947,
+      "anchoredPosition": [
+        3235,
+        -1611
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 11,
+      "uguiPosition": [
+        690.1333333333333,
+        -343.68
+      ],
+      "uguiSize": [
+        633.1733333333334,
+        415.36
+      ],
+      "originalResolutionFile": "OriginalResolution/StarPlatform/Hologram_StarMap.png"
+    },
+    {
+      "name": "Panel_Left",
+      "parent": "FloatingPanels",
+      "sprite": "Textures/FloatingPanels/Panel_Left.png",
+      "sourceLayer": "悬浮窗",
+      "active": true,
+      "x": 534,
+      "y": 407,
+      "width": 1364,
+      "height": 1427,
+      "textureWidth": 1364,
+      "textureHeight": 1427,
+      "anchoredPosition": [
+        534,
+        -407
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 12,
+      "uguiPosition": [
+        113.92,
+        -86.82666666666667
+      ],
+      "uguiSize": [
+        290.9866666666667,
+        304.4266666666667
+      ],
+      "originalResolutionFile": "OriginalResolution/FloatingPanels/Panel_Left.png"
+    },
+    {
+      "name": "Panel_Left_WarmRed",
+      "parent": "FloatingPanels",
+      "sprite": "Textures/Alternatives/Panel_Left_WarmRed.png",
+      "sourceLayer": "金色悬浮",
+      "active": false,
+      "x": 534,
+      "y": 407,
+      "width": 1364,
+      "height": 1427,
+      "textureWidth": 1364,
+      "textureHeight": 1427,
+      "anchoredPosition": [
+        534,
+        -407
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 13,
+      "replaces": "Panel_Left",
+      "uguiPosition": [
+        113.92,
+        -86.82666666666667
+      ],
+      "uguiSize": [
+        290.9866666666667,
+        304.4266666666667
+      ],
+      "originalResolutionFile": "OriginalResolution/Alternatives/Panel_Left_WarmRed.png"
+    },
+    {
+      "name": "Panel_Right",
+      "parent": "FloatingPanels",
+      "sprite": "Textures/FloatingPanels/Panel_Right.png",
+      "sourceLayer": "悬浮窗",
+      "active": true,
+      "x": 6157,
+      "y": 1178,
+      "width": 2140,
+      "height": 1362,
+      "textureWidth": 2140,
+      "textureHeight": 1362,
+      "anchoredPosition": [
+        6157,
+        -1178
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 14,
+      "uguiPosition": [
+        1313.4933333333333,
+        -251.30666666666667
+      ],
+      "uguiSize": [
+        456.53333333333336,
+        290.56
+      ],
+      "originalResolutionFile": "OriginalResolution/FloatingPanels/Panel_Right.png"
+    },
+    {
+      "name": "Panel_Right_WarmRed",
+      "parent": "FloatingPanels",
+      "sprite": "Textures/Alternatives/Panel_Right_WarmRed.png",
+      "sourceLayer": "金色悬浮",
+      "active": false,
+      "x": 6157,
+      "y": 1178,
+      "width": 2140,
+      "height": 1362,
+      "textureWidth": 2140,
+      "textureHeight": 1362,
+      "anchoredPosition": [
+        6157,
+        -1178
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        0,
+        1
+      ],
+      "pivot": [
+        0,
+        1
+      ],
+      "imageType": "Simple",
+      "raycastTarget": false,
+      "sortingOrder": 15,
+      "replaces": "Panel_Right",
+      "uguiPosition": [
+        1313.4933333333333,
+        -251.30666666666667
+      ],
+      "uguiSize": [
+        456.53333333333336,
+        290.56
+      ],
+      "originalResolutionFile": "OriginalResolution/Alternatives/Panel_Right_WarmRed.png"
+    }
+  ],
+  "referenceResolution": [
+    1920,
+    1066.6666666666667
+  ],
+  "sourceToUGUIScale": 0.21333333333333335
+}

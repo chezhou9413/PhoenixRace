@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+    <defName>Ability_AirStrikeBombing</defName>
+    <label>飞机俯冲轰炸</label>
+    <description>呼叫一架凤凰战机从高空切入目标点，俯冲投弹后拉升撤离，并在脱离时执行一次桶滚。</description>
+    <iconPath>Ability/DisruptionMatrix</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <warmupTime>0.5</warmupTime>
+      <range>999</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="PhoenixRaceLib.PhoxAbility.CompProperties_AbilityAirStrikeBombing">
+        <spawnHeight>48</spawnHeight>
+        <spawnDistance>60</spawnDistance>
+        <approachDistance>36</approachDistance>
+        <diveArcHeight>4</diveArcHeight>
+        <pullUpHeight>44</pullUpHeight>
+        <pullUpDistance>108</pullUpDistance>
+        <approachTicks>36</approachTicks>
+        <diveTicks>60</diveTicks>
+        <pullUpTicks>48</pullUpTicks>
+        <barrelRollDelayTicks>10</barrelRollDelayTicks>
+        <barrelRollDurationTicks>72</barrelRollDurationTicks>
+        <damageAmount>50</damageAmount>
+        <damageRadius>2.9</damageRadius>
+        <damageDef>Bomb</damageDef>
+        <explosionVisualLifeTicks>300</explosionVisualLifeTicks>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

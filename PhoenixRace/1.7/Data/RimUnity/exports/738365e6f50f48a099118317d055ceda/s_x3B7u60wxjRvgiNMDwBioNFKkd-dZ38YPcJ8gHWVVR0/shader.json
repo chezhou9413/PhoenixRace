@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "shaderName": "ShieldDissolve",
+  "profile": "world",
+  "uiMasks": false,
+  "colorSpace": "Gamma",
+  "grabTexture": null,
+  "geometry": null,
+  "vertexEntry": "vert",
+  "fragmentEntry": "frag",
+  "vertexFile": "shader.vert.glsl",
+  "fragmentFile": "shader.frag.glsl",
+  "arrays": {},
+  "properties": [
+    {
+      "name": "_MainTex",
+      "displayName": "Sprite Texture",
+      "type": "2D",
+      "attributes": [
+        "PerRendererData"
+      ],
+      "defaultValue": null,
+      "defaultTexture": "white",
+      "range": null
+    },
+    {
+      "name": "_Color",
+      "displayName": "Tint",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_NoiseTex",
+      "displayName": "Noise Texture",
+      "type": "2D",
+      "attributes": [
+        "Header ( Dissolve Settings )"
+      ],
+      "defaultValue": null,
+      "defaultTexture": "white",
+      "range": null
+    },
+    {
+      "name": "_DissolveAmount",
+      "displayName": "Dissolve Amount",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.5
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        2
+      ]
+    },
+    {
+      "name": "_EdgeWidth",
+      "displayName": "Edge Width",
+      "type": "Range",
+      "attributes": [
+        "Header ( Edge Settings )"
+      ],
+      "defaultValue": [
+        0.05
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        0.2
+      ]
+    },
+    {
+      "name": "_EdgeColor",
+      "displayName": "Edge Color",
+      "type": "Color",
+      "attributes": [
+        "HDR"
+      ],
+      "defaultValue": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    }
+  ],
+  "tags": {
+    "Queue": "Transparent",
+    "IgnoreProjector": "True",
+    "RenderType": "Transparent",
+    "PreviewType": "Plane",
+    "CanUseSpriteAtlas": "True"
+  },
+  "states": {
+    "Cull": "Off",
+    "ZWrite": "Off",
+    "Blend": "SrcAlpha OneMinusSrcAlpha"
+  },
+  "keywords": [],
+  "keywordGroups": [],
+  "approximations": []
+}

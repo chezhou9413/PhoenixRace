@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 文件职责：集中维护凤凰的年龄阶段、基础绘制尺寸和各年龄的整体绘制倍率。 -->
+  <!-- 原版一倍人形绘制宽度为 1.5；头部宽度为 1.5 乘 headSizeFactor。 -->
+  <!-- 各阶段固定 bodyWidth 为 1.5、headSizeFactor 为 1，实际大小只调整下方四组 HAR 年龄倍率。 -->
+  <!-- 年龄倍率同步作用于身体、头部、头发、耳羽、尾羽和肖像，不改变身体体积或生命值倍率。 -->
+  <AlienRace.ThingDef_AlienRace Name="PhoenixLifeStageBase" ParentName="BasePawn" Abstract="True">
+    <race>
+      <lifeStageAges Inherit="False">
+        <!-- 婴儿期：0~3岁 -->
+        <li Class="AlienRace.LifeStageAgeAlien">
+          <def>Phoenix_LifeStage_Baby</def>
+          <minAge>0</minAge>
+          <customDrawSize>(0.83, 0.83)</customDrawSize>
+          <customHeadDrawSize>(0.83, 0.83)</customHeadDrawSize>
+          <customPortraitDrawSize>(0.83, 0.83)</customPortraitDrawSize>
+          <customPortraitHeadDrawSize>(0.83, 0.83)</customPortraitHeadDrawSize>
+        </li>
+        <!-- 幼年期：3~13岁 -->
+        <li Class="AlienRace.LifeStageAgeAlien">
+          <def>Phoenix_LifeStage_Child</def>
+          <minAge>3</minAge>
+          <customDrawSize>(0.885, 0.885)</customDrawSize>
+          <customHeadDrawSize>(0.885, 0.885)</customHeadDrawSize>
+          <customPortraitDrawSize>(0.885, 0.885)</customPortraitDrawSize>
+          <customPortraitHeadDrawSize>(0.885, 0.885)</customPortraitHeadDrawSize>
+        </li>
+        <!-- 青少年期：13~18岁 -->
+        <li Class="AlienRace.LifeStageAgeAlien">
+          <def>Phoenix_LifeStage_Teenager</def>
+          <minAge>13</minAge>
+          <customDrawSize>(0.995, 0.995)</customDrawSize>
+          <customHeadDrawSize>(0.995, 0.995)</customHeadDrawSize>
+          <customPortraitDrawSize>(0.995, 0.995)</customPortraitDrawSize>
+          <customPortraitHeadDrawSize>(0.995, 0.995)</customPortraitHeadDrawSize>
+        </li>
+        <!-- 成年期按渡鸦女性的可见身高与脚底位置校准；整套像素等比缩放。 -->
+        <li Class="AlienRace.LifeStageAgeAlien">
+          <def>Phoenix_LifeStage_Adult</def>
+          <minAge>18</minAge>
+          <customDrawSize>(1.27, 1.27)</customDrawSize>
+          <customHeadDrawSize>(1.27, 1.27)</customHeadDrawSize>
+          <customPortraitDrawSize>(1.27, 1.27)</customPortraitDrawSize>
+          <customPortraitHeadDrawSize>(1.27, 1.27)</customPortraitHeadDrawSize>
+        </li>
+      </lifeStageAges>
+    </race>
+  </AlienRace.ThingDef_AlienRace>
+
+  <!-- 婴儿阶段保留原版照护、睡眠与成长行为，绘制比例由年龄倍率控制。 -->
+  <LifeStageDef ParentName="HumanlikeAdolescent">
+    <defName>Phoenix_LifeStage_Baby</defName>
+    <label>凤凰婴儿</label>
+    <alwaysDowned>true</alwaysDowned>
+    <bodyDrawOffset>(0, 0, -0.03)</bodyDrawOffset>
+    <bodySizeFactor>0.2</bodySizeFactor>
+    <bodyWidth>1.5</bodyWidth>
+    <canDoRandomMentalBreaks>false</canDoRandomMentalBreaks>
+    <canInitiateSocialInteraction>false</canInitiateSocialInteraction>
+    <canSleepWhenStarving>false</canSleepWhenStarving>
+    <canSleepWhileHeld>true</canSleepWhileHeld>
+    <canVoluntarilySleep>false</canVoluntarilySleep>
+    <claimable>true</claimable>
+    <customMoodTipString>心情代表婴儿当前的快乐或压力程度。低心情的婴儿更容易哭泣，高心情的婴儿则更容易咯咯发笑。</customMoodTipString>
+    <developmentalStage>Baby</developmentalStage>
+    <eyeSizeFactor>0.7</eyeSizeFactor>
+    <fallAsleepMaxThresholdOverride>0.6</fallAsleepMaxThresholdOverride>
+    <foodMaxFactor>0.625</foodMaxFactor>
+    <hairStyleFilter>
+      <whitelist>false</whitelist>
+      <tags>
+        <li>Balding</li>
+      </tags>
+    </hairStyleFilter>
+    <headSizeFactor>1</headSizeFactor>
+    <healthScaleFactor>0.2</healthScaleFactor>
+    <hungerRateFactor>0.125</hungerRateFactor>
+    <involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent>
+    <involuntarySleepMTBDaysFromRest>
+      <points>
+        <li>(.00, 0)</li>
+        <li>(.01, .01)</li>
+        <li>(.15, .166)</li>
+        <li>(.30, 1)</li>
+        <li>(.59, 10)</li>
+        <li>(.60, Infinity)</li>
+      </points>
+    </involuntarySleepMTBDaysFromRest>
+    <marketValueFactor>0.5</marketValueFactor>
+    <meleeDamageFactor>0.5</meleeDamageFactor>
+    <naturalWakeThresholdOverride>1</naturalWakeThresholdOverride>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanBaby</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+    <statFactors>
+      <MoveSpeed>0.2</MoveSpeed>
+    </statFactors>
+    <statOffsets>
+      <ComfyTemperatureMin>-46</ComfyTemperatureMin>
+      <ComfyTemperatureMax>4</ComfyTemperatureMax>
+    </statOffsets>
+    <thinkTreeConstantOverride MayRequire="Ludeon.RimWorld.Biotech">HumanlikeBabyConstant</thinkTreeConstantOverride>
+    <thinkTreeMainOverride MayRequire="Ludeon.RimWorld.Biotech">HumanlikeBaby</thinkTreeMainOverride>
+    <voxPitch>1.6</voxPitch>
+  </LifeStageDef>
+
+  <!-- 幼年阶段继承原版儿童行为，头部与身体使用一致的基础绘制尺寸。 -->
+  <LifeStageDef ParentName="LifeStageHumanlikeChild">
+    <defName>Phoenix_LifeStage_Child</defName>
+    <label>凤凰幼年</label>
+    <bodyWidth>1.5</bodyWidth>
+    <headSizeFactor>1</headSizeFactor>
+  </LifeStageDef>
+
+  <!-- 青少年阶段保留原版成人发育行为，绘制比例由年龄倍率控制。 -->
+  <LifeStageDef ParentName="HumanlikeAdolescent">
+    <defName>Phoenix_LifeStage_Teenager</defName>
+    <label>凤凰青少年</label>
+    <adjective>青少年</adjective>
+    <bodySizeFactor>0.8</bodySizeFactor>
+    <bodyWidth>1.5</bodyWidth>
+    <equipmentDrawDistanceFactor>0.65</equipmentDrawDistanceFactor>
+    <foodMaxFactor>1.25</foodMaxFactor>
+    <hairStyleFilter>
+      <whitelist>false</whitelist>
+      <tags>
+        <li>Balding</li>
+      </tags>
+    </hairStyleFilter>
+    <healthScaleFactor>0.9</healthScaleFactor>
+    <headSizeFactor>1</headSizeFactor>
+    <meleeDamageFactor>0.75</meleeDamageFactor>
+    <reproductive>true</reproductive>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanChild</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+    <sittingOffset>0.23</sittingOffset>
+    <statFactors>
+      <MoveSpeed>0.95</MoveSpeed>
+    </statFactors>
+    <workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+  </LifeStageDef>
+
+  <!-- 成年阶段保留原版成年行为，绘制比例由年龄倍率控制。 -->
+  <LifeStageDef>
+    <defName>Phoenix_LifeStage_Adult</defName>
+    <label>凤凰成年</label>
+    <bodyWidth>1.5</bodyWidth>
+    <headSizeFactor>1</headSizeFactor>
+    <reproductive>true</reproductive>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanAdult</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+    <sittingOffset>0.18</sittingOffset>
+    <visible>false</visible>
+    <workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+  </LifeStageDef>
+</Defs>

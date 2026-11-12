@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ChezhouLib.LibDef.ClShaderMaterial>
+        <defName>SingleImageGlitch_Material</defName>
+        <label>故障</label>
+        <shaderName>SingleImageGlitch</shaderName>
+        <resModID>chezhou.Race.PhoenixRace</resModID>
+    </ChezhouLib.LibDef.ClShaderMaterial>
+
+    <ChezhouLib.LibDef.ClShaderMaterial>
+        <defName>ShieldDissolve_Material</defName>
+        <label>消融</label>
+        <shaderName>ShieldDissolve</shaderName>
+        <resModID>chezhou.Race.PhoenixRace</resModID>
+        <shaderParameters>
+            <li>
+                <parameterName>_NoiseTex</parameterName>
+                <parameterValue>Noise</parameterValue>
+                <resModID>chezhou.Race.PhoenixRace</resModID>
+            </li>
+        </shaderParameters>
+    </ChezhouLib.LibDef.ClShaderMaterial>
+    <ChezhouLib.LibDef.ClShaderMaterial>
+        <defName>ShieldFlow_Material</defName>
+        <label>护盾流动</label>
+        <shaderName>ShieldEnergyFlow</shaderName>
+        <resModID>chezhou.Race.PhoenixRace</resModID>
+        <shaderParameters>
+            <li>
+                <parameterName>_NoiseTex</parameterName>
+                <parameterValue>Noise</parameterValue>
+                <resModID>chezhou.Race.PhoenixRace</resModID>
+            </li>
+            <li>
+                <parameterName>_FlowSpeed</parameterName>
+                <parameterValue>(0.1, 0.1, 0, 0)</parameterValue>
+            </li>
+            <li>
+                <parameterName>_NoiseStrength</parameterName>
+                <parameterValue>0.06</parameterValue>
+            </li>
+
+            <li>
+                <parameterName>_AlphaBoost</parameterName>
+                <parameterValue>1.5</parameterValue>
+            </li>
+        </shaderParameters>
+    </ChezhouLib.LibDef.ClShaderMaterial>
+
+    <ChezhouLib.LibDef.ClShaderPro>
+        <defName>ShieldFlow_ShaderPro</defName>
+        <ClShaderMaterial>SingleImageGlitch_Material</ClShaderMaterial>
+        <shaderPath>Map/Cutout</shaderPath>
+    </ChezhouLib.LibDef.ClShaderPro>
+</Defs>

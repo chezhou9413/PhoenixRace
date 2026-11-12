@@ -1,0 +1,476 @@
+{
+  "version": 1,
+  "shaderName": "Custom/PlasmaProjectile",
+  "profile": "world",
+  "uiMasks": false,
+  "colorSpace": "Gamma",
+  "grabTexture": null,
+  "geometry": null,
+  "vertexEntry": "vert",
+  "fragmentEntry": "frag",
+  "vertexFile": "shader.vert.glsl",
+  "fragmentFile": "shader.frag.glsl",
+  "arrays": {},
+  "properties": [
+    {
+      "name": "_CoreColor",
+      "displayName": "Core Color",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        0.8,
+        1,
+        1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_RimColor",
+      "displayName": "Rim Color",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        0,
+        0.6,
+        1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_FlashColor",
+      "displayName": "Flash Color",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_TailColor",
+      "displayName": "Tail Color",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        0,
+        0.8,
+        1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_EdgeColor1",
+      "displayName": "Edge Color A",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        0,
+        1,
+        0.8,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_EdgeColor2",
+      "displayName": "Edge Color B",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        0.4,
+        0,
+        1,
+        1
+      ],
+      "defaultTexture": null,
+      "range": null
+    },
+    {
+      "name": "_CorePower",
+      "displayName": "Core Falloff",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        2
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.5,
+        8
+      ]
+    },
+    {
+      "name": "_RimPower",
+      "displayName": "Rim Power",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        4
+      ],
+      "defaultTexture": null,
+      "range": [
+        1,
+        8
+      ]
+    },
+    {
+      "name": "_NoseSoft",
+      "displayName": "Nose Softness",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.08
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.01,
+        0.5
+      ]
+    },
+    {
+      "name": "_Intensity",
+      "displayName": "Intensity",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        3
+      ],
+      "defaultTexture": null,
+      "range": [
+        1,
+        8
+      ]
+    },
+    {
+      "name": "_BreathSpeed",
+      "displayName": "Breath Speed",
+      "type": "Range",
+      "attributes": [
+        "Header ( Breathing Flash )"
+      ],
+      "defaultValue": [
+        1.2
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.1,
+        5
+      ]
+    },
+    {
+      "name": "_BreathMin",
+      "displayName": "Breath Min",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "_BreathMax",
+      "displayName": "Breath Max",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        1
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "_FlashSharp",
+      "displayName": "Flash Sharpness",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        6
+      ],
+      "defaultTexture": null,
+      "range": [
+        1,
+        16
+      ]
+    },
+    {
+      "name": "_RippleSpeed",
+      "displayName": "Ripple Speed",
+      "type": "Range",
+      "attributes": [
+        "Header ( Ripple )"
+      ],
+      "defaultValue": [
+        4
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        10
+      ]
+    },
+    {
+      "name": "_RippleFreq",
+      "displayName": "Ripple Frequency",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        8
+      ],
+      "defaultTexture": null,
+      "range": [
+        1,
+        20
+      ]
+    },
+    {
+      "name": "_RippleAmp",
+      "displayName": "Ripple Amplitude",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.3
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "_EdgeNoiseScale",
+      "displayName": "Edge Noise Scale",
+      "type": "Range",
+      "attributes": [
+        "Header ( Irregular Edge )"
+      ],
+      "defaultValue": [
+        5
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.5,
+        12
+      ]
+    },
+    {
+      "name": "_EdgeNoiseSpeed",
+      "displayName": "Edge Noise Speed",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        2
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        6
+      ]
+    },
+    {
+      "name": "_EdgeDistort",
+      "displayName": "Edge Distortion",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.7
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        1.5
+      ]
+    },
+    {
+      "name": "_EdgeWidth",
+      "displayName": "Edge Width",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.18
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.01,
+        0.5
+      ]
+    },
+    {
+      "name": "_EdgeSharp",
+      "displayName": "Edge Sharpness",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        4
+      ],
+      "defaultTexture": null,
+      "range": [
+        1,
+        16
+      ]
+    },
+    {
+      "name": "_EdgeColorSpeed",
+      "displayName": "Edge Color Speed",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        1.8
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        6
+      ]
+    },
+    {
+      "name": "_EdgeColorScale",
+      "displayName": "Edge Color Scale",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        3
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.5,
+        8
+      ]
+    },
+    {
+      "name": "_TailCutoff",
+      "displayName": "Tail Cutoff",
+      "type": "Range",
+      "attributes": [
+        "Header ( Dynamic Tail )"
+      ],
+      "defaultValue": [
+        0.05
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "_TailSoftBase",
+      "displayName": "Tail Soft Base",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.15
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.01,
+        0.4
+      ]
+    },
+    {
+      "name": "_TailNoiseScale",
+      "displayName": "Tail Noise Scale",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        4
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.5,
+        12
+      ]
+    },
+    {
+      "name": "_TailNoiseSpeed",
+      "displayName": "Tail Noise Speed",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        2.5
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        6
+      ]
+    },
+    {
+      "name": "_TailNoiseAmp",
+      "displayName": "Tail Noise Amp",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        0.18
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        0.4
+      ]
+    },
+    {
+      "name": "_NoiseScale",
+      "displayName": "Surface Noise Scale",
+      "type": "Range",
+      "attributes": [
+        "Header ( Surface Noise )"
+      ],
+      "defaultValue": [
+        3
+      ],
+      "defaultTexture": null,
+      "range": [
+        0.5,
+        8
+      ]
+    },
+    {
+      "name": "_NoiseSpeed",
+      "displayName": "Surface Noise Speed",
+      "type": "Range",
+      "attributes": [],
+      "defaultValue": [
+        1.5
+      ],
+      "defaultTexture": null,
+      "range": [
+        0,
+        5
+      ]
+    }
+  ],
+  "tags": {
+    "Queue": "Transparent",
+    "RenderType": "Transparent",
+    "IgnoreProjector": "True"
+  },
+  "states": {
+    "ZWrite": "Off",
+    "Cull": "Off",
+    "Blend": "One One"
+  },
+  "keywords": [],
+  "keywordGroups": [],
+  "approximations": [
+    "常量正整数幂 2～64 使用乘法展开；负底数按整数幂计算，属于旧 Shader 写法的兼容处理，并非 HLSL pow 的负底数语义保证。",
+    "smoothstep 按 HLSL 饱和 Hermite 公式展开，支持反向边界；相等边界仍要求作者避免除零。"
+  ]
+}

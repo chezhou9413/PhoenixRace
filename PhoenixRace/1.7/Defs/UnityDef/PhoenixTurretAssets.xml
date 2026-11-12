@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ChezhouLib.LibDef.ClAssetLord>
+    <defName>PhoenixTurretAssets</defName>
+    <label>凤凰炮塔模型资源</label>
+    <rimUnityBundle>phoenixraceturrets</rimUnityBundle>
+    <unityAssetMount>
+      <li>
+        <key>Phoenix_TripleTurret</key>
+        <value>Models/PhoenixTripleTurret/PhoenixTripleTurret.prefab</value>
+      </li>
+      <li>
+        <key>Phoenix_TurretMuzzle</key>
+        <value>Models/PhoenixTripleTurret/PhoenixTurretMuzzle.prefab</value>
+      </li>
+      <li>
+        <key>Phoenix_TurretImpact</key>
+        <value>Models/PhoenixTripleTurret/PhoenixTurretImpact.prefab</value>
+      </li>
+      <li>
+        <key>Phoenix_TurretShell</key>
+        <value>Models/PhoenixTripleTurret/PhoenixTurretShell.prefab</value>
+      </li>
+    </unityAssetMount>
+  </ChezhouLib.LibDef.ClAssetLord>
+</Defs>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+    <defName>Ability_SolarBombardment</defName>
+    <label>太阳轰炸</label>
+    <description>呼叫太阳轰炸，选择全图任意地点施法。当前仅搭建技能骨架与范围预览。</description>
+    <iconPath>Ability/DisruptionMatrix</iconPath>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <targetRequired>true</targetRequired>
+    <hostile>true</hostile>
+    <statBases>
+      <!-- 使用原版 Ability_EffectRadius，在选点时显示原版范围环 UI -->
+      <Ability_EffectRadius>13.8</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <warmupTime>0.5</warmupTime>
+      <range>999</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="PhoenixRaceLib.PhoxAbility.CompProperties_AbilitySolarBombardment" />
+    </comps>
+  </AbilityDef>
+</Defs>

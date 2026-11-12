@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <ModMetaData>
   <name>PhoenixRace</name>
   <author>作者：PhoenixRace 团队</author>
   <supportedVersions>
-    <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <description>本模组的基础框架（初始化）。后续将添加凤凰族等内容。</description>
   <packageId>chezhou.Race.PhoenixRace</packageId>
@@ -23,14 +23,15 @@
       <displayName>ChezhouLib</displayName>
       <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3595247479</steamWorkshopUrl>
     </li>
+    <li>
+      <packageId>Chezhou.RimUnity</packageId>
+      <displayName>RimUnity</displayName>
+    </li>
   </modDependencies>
-
   <loadAfter>
     <li>brrainz.harmony</li>
     <li>erdelf.HumanoidAlienRaces</li>
     <li>Chezhou.ChezhouLib.lib</li>
+    <li>Chezhou.RimUnity</li>
   </loadAfter>
-  <!-- 可选：为你的模组设置图标路径，例如：Textures/YourIcon -->
-  <!-- <modIconPath>Textures/ModIcon</modIconPath> -->
 </ModMetaData>
-

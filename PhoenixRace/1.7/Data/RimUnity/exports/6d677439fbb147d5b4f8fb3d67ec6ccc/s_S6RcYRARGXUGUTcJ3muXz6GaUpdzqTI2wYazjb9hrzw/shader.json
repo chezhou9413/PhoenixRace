@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "shaderName": "PhoenixRace/HologramLine",
+  "profile": "world",
+  "uiMasks": false,
+  "colorSpace": "Linear",
+  "grabTexture": null,
+  "geometry": null,
+  "vertexEntry": "vert",
+  "fragmentEntry": "frag",
+  "vertexFile": "shader.vert.glsl",
+  "fragmentFile": "shader.frag.glsl",
+  "arrays": {},
+  "properties": [
+    {
+      "name": "_Color",
+      "displayName": "光线颜色",
+      "type": "Color",
+      "attributes": [],
+      "defaultValue": [
+        0.05,
+        0.8,
+        1,
+        0.6
+      ],
+      "defaultTexture": null,
+      "range": null
+    }
+  ],
+  "tags": {
+    "Queue": "Transparent",
+    "RenderType": "Transparent"
+  },
+  "states": {
+    "Blend": "SrcAlpha One",
+    "ZWrite": "Off",
+    "Cull": "Off"
+  },
+  "keywords": [],
+  "keywordGroups": [],
+  "approximations": [
+    "程序按 Linear 计算后编码到宿主 UNorm 场景；透明叠加沿用宿主的 Gamma 混合，HDR 超出场景格式范围的部分仍会截断。"
+  ]
+}
